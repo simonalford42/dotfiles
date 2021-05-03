@@ -1,0 +1,14 @@
+Steps:
+
+1. Clone this repo. You've done that already.
+2. Download Karabiner Elements. Install it.
+3. Download Spectacle. Install it.
+4. Run setup.bash in here.
+5. Go to Terminal Preferences -> Profiles. Click the gear sign to import a new one, and choose ~/Documents/solarized_dark.terminal (which was put there by the bash
+script.) 
+6. Go to Karabiner Elements. Add complex modification 'Post Esc if Caps is tapped, Control if held. 
+
+Sources for more info:
+
+Terminal colors: https://github.com/altercation/solarized/pull/314/commits/b8f7484fed98de37736b7c025cbcea7647204fe6
+Karabiner remap: https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b

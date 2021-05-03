@@ -12,7 +12,6 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias pip=echo "python -m pip"
 alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
 # alias scopy='scp -r salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/Downloads/'
 alias src='source ~/.zshenv'
@@ -25,18 +24,6 @@ alias gst='git status'
 alias cda='conda activate arc'
 alias mp='./mypy.sh'
 alias bu='ssh -L 5000:127.0.0.1:5000 salford@peterchin8.bu.edu'
-
-
-function grepscm() {
-    grep -rnw ./ --include \*.scm -e "$@"
-}
-
-function scm_pset() {
-    # wget command taken from https://stackoverflow.com/a/26269730/4383594
-    cd ~/Code/6-945/ && mkdir ps$1 && cd ps$1
-    wget -r -np -nH --cut-dirs=6 http://groups.csail.mit.edu/mac/users/gjs/6.945/psets/ps$1/
-    mvt index.html*C=*
-}
 
 function ga() {
     git add "$@"

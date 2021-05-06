@@ -1,5 +1,6 @@
 alias go="python -m rl.main"
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
+alias mvm2='cd /om2/user/salford/neurosymbolic-modules/bidir-synth && source activate pytorch'
 alias ll="ssh salford@txe1-login.mit.edu"
 alias om='ssh -Y salford@openmind7.mit.edu'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories

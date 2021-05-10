@@ -1,30 +1,36 @@
-alias go="python -m rl.main"
-alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
+# ssh aliases
+alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
+alias bu='ssh -L 5002:127.0.0.1:5000 salford@peterchin8.bu.edu'
 alias ll="ssh salford@txe1-login.mit.edu"
 alias om='ssh -Y salford@openmind7.mit.edu'
-alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias tb='ssh -L 16006:127.0.0.1:6006 salford@txe1-login.mit.edu'
-alias mlf='ssh -L 5000:127.0.0.1:5000 salford@polestar.mit.edu'
+alias mlf='ssh -L 5001:127.0.0.1:5000 salford@polestar.mit.edu'
 alias pst='ssh -Y salford@polestar.mit.edu'
-alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias athena='ssh -Y salford@athena.dialup.mit.edu'
+
+# specialized aliases
+alias go="python -m rl.main"
+alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
+alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
+alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
+
+# general aliases
+alias src='source ~/.zshenv'
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+alias cda='conda activate arc'
+alias mp='./mypy.sh'
+alias pdflatex='latex2'
+alias pip=echo "python -m pip"
+alias ls='ls -Gp' # G colorizes output, p puts a / after directories
+alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
-alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias pip=echo "python -m pip"
-alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
-# alias scopy='scp -r salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/Downloads/'
-alias src='source ~/.zshenv'
-alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
-alias pdflatex='latex2'
-alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+
+# git aliases
 alias gp='git pull'
 alias gpom='git push origin master'
 alias gst='git status'
-alias cda='conda activate arc'
-alias mp='./mypy.sh'
-alias bu='ssh -L 5000:127.0.0.1:5000 salford@peterchin8.bu.edu'
 
 
 function grepscm() {

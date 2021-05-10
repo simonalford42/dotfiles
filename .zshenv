@@ -1,6 +1,9 @@
 # ssh aliases
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
 alias bu='ssh -L 5002:127.0.0.1:5000 salford@peterchin8.bu.edu'
+alias go="python -m rl.main"
+alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
+alias mvm2='cd /om2/user/salford/neurosymbolic-modules/bidir-synth && source activate pytorch'
 alias ll="ssh salford@txe1-login.mit.edu"
 alias om='ssh -Y salford@openmind7.mit.edu'
 alias tb='ssh -L 16006:127.0.0.1:6006 salford@txe1-login.mit.edu'
@@ -12,6 +15,10 @@ alias athena='ssh -Y salford@athena.dialup.mit.edu'
 alias go="python -m rl.main"
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
 alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias python=python3
+alias bp="vim ~/.zshenv"
+alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
 
 # general aliases
@@ -31,18 +38,6 @@ alias bp="vim ~/.zshenv"
 alias gp='git pull'
 alias gpom='git push origin master'
 alias gst='git status'
-
-
-function grepscm() {
-    grep -rnw ./ --include \*.scm -e "$@"
-}
-
-function scm_pset() {
-    # wget command taken from https://stackoverflow.com/a/26269730/4383594
-    cd ~/Code/6-945/ && mkdir ps$1 && cd ps$1
-    wget -r -np -nH --cut-dirs=6 http://groups.csail.mit.edu/mac/users/gjs/6.945/psets/ps$1/
-    mvt index.html*C=*
-}
 
 function ga() {
     git add "$@"
@@ -96,14 +91,14 @@ export SKETCH_HOME="/Users/alfordsimon/Applications/sketch-1.7.6/sketch-frontend
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/guest/salford/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/guest/salford/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/guest/salford/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
+        export PATH="/home/guest/salford/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

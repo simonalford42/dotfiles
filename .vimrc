@@ -1,5 +1,4 @@
 " for pathogen plugin manager execute pathogen#infect()
-" testing changes
 let g:pathogen_disabled = []
 call pathogen#infect()
 filetype off

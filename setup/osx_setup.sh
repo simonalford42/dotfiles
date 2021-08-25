@@ -11,6 +11,9 @@ chflags nohidden ~/Library
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Disable the accents showing up when pressing key
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 

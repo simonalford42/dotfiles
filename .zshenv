@@ -1,6 +1,6 @@
 # ssh aliases
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias bu='ssh -L 5002:127.0.0.1:5000 salford@peterchin8.bu.edu'
+alias bu='ssh -L 5002:127.0.0.1:5005 salford@peterchin8.bu.edu'
 alias go="python -m rl.main"
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
 alias mvm2='cd /om2/user/salford/neurosymbolic-modules/bidir-synth && source activate pytorch'
@@ -91,14 +91,14 @@ export SKETCH_HOME="/Users/alfordsimon/Applications/sketch-1.7.6/sketch-frontend
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/guest/salford/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/guest/salford/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/guest/salford/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/guest/salford/miniconda3/bin:$PATH"
+        export PATH="/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

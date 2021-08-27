@@ -91,14 +91,14 @@ export SKETCH_HOME="/Users/alfordsimon/Applications/sketch-1.7.6/sketch-frontend
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/alfordsimon/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/alfordsimon/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/alfordsimon/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/alfordsimon/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -110,4 +110,11 @@ precmd() {
   echo -ne "\033]0;${PWD##*/}\007"
 }
 fi
+
+
+# Update your path to include LaTeX for TAs
+export PATH=${PATH}:/usr/texbin
+
+# Kivy settings for preferences and logging
+export KIVY_HOME="${HOME}/.kivy"
 

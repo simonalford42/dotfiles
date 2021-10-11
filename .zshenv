@@ -10,6 +10,7 @@ alias tb='ssh -L 16006:127.0.0.1:6006 salford@txe1-login.mit.edu'
 alias mlf='ssh -L 5001:127.0.0.1:5000 salford@polestar.mit.edu'
 alias pst='ssh -Y salford@polestar.mit.edu'
 alias athena='ssh -Y salford@athena.dialup.mit.edu'
+alias cornell='ssh sca63@linux.coecis.cornell.edu'
 
 # specialized aliases
 alias go="python -m rl.main"
@@ -18,6 +19,7 @@ alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
+alias bpp="vim ~/.bash_scripts.sh"
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
 
@@ -33,6 +35,8 @@ alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
+# empty trash
+alias et="rm -rf ~/trash/*"
 
 # git aliases
 alias gp='git pull'
@@ -86,6 +90,10 @@ set -o vi
 # added for sketch 2020 6.s084
 export PATH="$PATH:/Users/alfordsimon/Applications/sketch-1.7.6/sketch-frontend/"
 export SKETCH_HOME="/Users/alfordsimon/Applications/sketch-1.7.6/sketch-frontend/runtime"
+# trying again with new sketch download?
+export PATH="$PATH:/Users/alfordsimon/Code/sketch-1.7.6/sketch-frontend"
+export SKETCH_HOME="/Users/alfordsimon/Code/sketch-1.7.6/sketch-frontend/runtime"
+
 # for conda
 # export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 

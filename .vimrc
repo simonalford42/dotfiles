@@ -37,7 +37,13 @@ hi Normal guibg=NONE ctermbg=NONE
 set backspace=indent,eol,start " backspace functionality
 set cc=80 " show a vertical line at 80 characters.
 set list " show hidden characters
-set listchars=tab:>-,trail:_ "add tab as hidden char to show. Not sure if I want trailing spaces shown.
+
+
+"add tab, trailing whitespace as hidden chars to show
+" set listchars=tab:>-,trail:_
+" add tab as hidden char to show
+set listchars=tab:>-,
+
 let mapleader=" " "set spacebar to the leader
 set linebreak " wrap lines at new words
 let $BASH_ENV = "~/.vim/vim_bash" " use bash commands in shell
@@ -45,7 +51,6 @@ let g:tex_flavor = "latex"
 set tw=79 fo=cqtnlj wm=0 " start a new line after 80 characters.
 set visualbell " turn on visual bell so that set t_vb turns off flashing at
 set t_vb= " this is supposed to be blank
-set iskeyword-=_ " underscores act like new words. trying it out.
 
 
 " make the status line for foreground winfow bright red. The ctermbg, ctermfg colors can be found by running ~/Documents/bash/test_colors.sh
@@ -69,6 +74,8 @@ endif
 " for sketch syntax
 au BufRead,BufNewFile *.sk set syntax=sketch
 au BufRead,BufNewFile *.sk set filetype=java
+au BufRead,BufNewFile *.skh set syntax=sketch
+au BufRead,BufNewFile *.skh set filetype=java
 
 augroup Inserting
     autocmd!
@@ -97,6 +104,9 @@ autocmd FileType sh set tw=0
 
 " Restore default behaviour when leaving Vim.
 autocmd VimLeave * silent !stty ixon
+
+" in Python underscores act like new words.
+" autocmd FileType python set iskeyword-=_
 
 " run python checker
 " autocmd BufWritePost *.py call flake8#Flake8()

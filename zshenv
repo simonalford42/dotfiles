@@ -35,8 +35,6 @@ alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
-# empty trash
-alias et="rm -rf ~/trash/*"
 
 # git aliases
 alias gp='git pull'
@@ -55,10 +53,7 @@ function latex2() {
     latexmk -pdf "$@" && latexmk -c
 } 
 
-function mvt() {
-    mv "$@" ~/trash/
-}
-
+# when you don't want brew to update before doing stuff
 function brew2() {
     HOMEBREW_NO_AUTO_UPDATE=1 brew "$@" && brew update
 }

@@ -16,14 +16,13 @@
 # so do ln -si ~/dotfiles/file ~/.file
 
 # editing ~/.zshenv should change dotfiles version
-# ln -si ~/.zshenv ~/dotfiles/zshenv
+ln -si /Users/simon/dotfiles/zshenv /Users/simon/.zshenv
 # # shouldn't ever edit zshrc
 # ln -si ~/dotfiles/zshenv ~/.zshrc
 # # editing ~/.zshenv should change ~/.bashrc
 # ln -si ~/.zshenv ~/.bashrc
 # # editing ~/.zshenv should change ~/.bash_profile
 # ln -si ~/.zshenv ~/.bash_profile
-ln -si ~/.vim ~/dotfiles/vim
 # editing ~/.spacemacs should change dotfiles version
 # ln -si ~/.spacemacs ~/dotfiles/spacemacs
 

@@ -56971,13 +56971,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.038571466226130724</real>
+				<real>0.019217882305383682</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.56624021131079871</real>
+				<real>0.65221354656580388</real>
 				<key>Red Component</key>
-				<real>0.780914306640625</real>
+				<real>0.8167724609375</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -57070,7 +57070,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/alfordsimon/Documents/backgrounds/e7cbUF.jpg</string>
+			<string>/Users/simon/Pictures/Photo cache/iterm_bg.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -57087,7 +57087,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.064422922036082464</real>
+			<real>0.050000000000000003</real>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>

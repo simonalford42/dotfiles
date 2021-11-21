@@ -22,7 +22,6 @@ alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias python=python3
 alias bp="vim ~/.zshenv"
-alias bpp="vim ~/.bash_scripts.sh"
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
 

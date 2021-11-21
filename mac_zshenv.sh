@@ -1,3 +1,5 @@
+# MAC zshenv
+
 # ssh aliases
 alias bu='ssh -L 5002:127.0.0.1:5005 salford@peterchin8.bu.edu'
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"

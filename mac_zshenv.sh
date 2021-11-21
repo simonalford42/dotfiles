@@ -16,6 +16,7 @@ alias cornell='ssh sca63@linux.coecis.cornell.edu'
 alias g2='ssh sca63@g2-login.coecis.cornell.edu'
 
 # other aliases
+alias src='source ~/dotfiles/mac_zshenv.sh'
 alias go="python -m rl.main"
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
 alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'

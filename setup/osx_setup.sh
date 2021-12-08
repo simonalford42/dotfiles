@@ -2,9 +2,15 @@
 
 # https://github.com/kevinSuttle/macOS-Defaults/blob/master/.macos
 
+# disable smart dashes system-wide
+defaults write -g NSAutomaticDashSubstitutionEnabled 0
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
+
+# fast trackpad speed. not sure if it does anything higher than a certain point, but try anyway
+defaults write -g com.apple.trackpad.scaling 50
 
 chflags nohidden ~/Library
 # Disable the “Are you sure you want to open this application?” dialog
@@ -16,6 +22,13 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 # defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Speed up Mission Control animations
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# Disable the all too sensitive backswipe on trackpads
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
@@ -44,6 +57,9 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1

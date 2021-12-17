@@ -13,7 +13,8 @@ alias pst='ssh -Y salford@polestar.mit.edu'
 alias athena='ssh -Y salford@athena.dialup.mit.edu'
 # for website
 alias cornell='ssh sca63@linux.coecis.cornell.edu'
-alias g2='ssh sca63@g2-login.coecis.cornell.edu'
+# for compute
+alias g2='ssh -L 8899:sablab-gpu-06.ece.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
 
 # other aliases
 alias src='source ~/dotfiles/mac_zshenv.sh'
@@ -22,12 +23,16 @@ alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
 alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias scopy='scp -rC salford@polestar.mit.edu:/om2/user/salford/to_copy/ ~/'
+alias scopy='scp -rC sca63@g2-login.coecis.cornell.edu:/home/sca63/to_copy/ ~/'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias cda='conda activate arc'
 alias pdflatex='latex2'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
+
+function g22() {
+    ssh -L "$@" sca63@g2-login.coecis.cornell.edu
+}
 
 function latex2() {
     latexmk -pdf "$@" && latexmk -c
@@ -68,17 +73,17 @@ export SKETCH_HOME="/Users/alfordsimon/Code/sketch-1.7.6/sketch-frontend/runtime
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/Users/simon/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/Users/simon/miniforge3/etc/profile.d/conda.sh" ]; then
-#         . "/Users/simon/miniforge3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/Users/simon/miniforge3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # iterm tab titles

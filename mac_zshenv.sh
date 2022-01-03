@@ -109,4 +109,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 
+# for jekyll; see https://jekyllrb.com/docs/installation/macos/ (12/27/21)
+export SDKROOT=$(xcrun --show-sdk-path)
+
+# for jekyll;
+export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
+
 . ~/dotfiles/general_zshenv.sh

@@ -1,5 +1,4 @@
 # aliases
-alias python=python3
 alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'

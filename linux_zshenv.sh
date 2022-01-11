@@ -14,6 +14,9 @@ alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --time=01:00:00 --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --time=01:00:00 --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --gres=gpu:1 --time=01:00:00 --partition=ellis-interactive --pty bash'
+
+alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
+
 alias sq='squeue -u sca63'
 # cancel all of my jobs
 alias scu='scancel -u sca63'
@@ -24,7 +27,7 @@ alias mvm='cd ~/abstraction/ && conda activate gcsl'
 alias go='python abstract.py'
 
 # since we don't have ag
-alias grepp='grep -rnw ./ -e' 
+alias grepp='grep -rnw ./ -e'
 
 # another good one is sacct
 # see gpus available

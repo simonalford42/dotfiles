@@ -9,6 +9,7 @@ alias bp="vim ~/dotfiles/*_zshenv.sh"
 alias gp='git pull'
 alias gpom='git push'
 alias gst='git status'
+alias gsub='git submodule update --init --recursive'
 
 function ga() {
     git add "$@"

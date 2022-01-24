@@ -14,20 +14,16 @@ alias athena='ssh -Y salford@athena.dialup.mit.edu'
 alias cornell='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
-# alias g2='ssh -L 8899:sablab-gpu-06.ece.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
-alias g2='ssh -L 8899:nikola-compute-03.cs.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
+alias g2='ssh -L 8899:sablab-gpu-01.ece.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
+# alias g2='ssh -L 8899:nikola-compute-03.cs.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
 
 # other aliases
 alias src='source ~/dotfiles/mac_zshenv.sh'
-alias go="python -m rl.main"
 alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
-alias alg='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/2021a-spring'
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC sca63@g2-login.coecis.cornell.edu:/home/sca63/to_copy/ ~/'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias pdflatex='latex2'
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
 function g22() {
@@ -104,3 +100,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+# had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
+conda deactivate && conda activate base

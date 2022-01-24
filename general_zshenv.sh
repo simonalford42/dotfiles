@@ -20,6 +20,10 @@ function gcm() {
     git commit -m "$@"
 }
 
+function gg() {
+    git add -u && git commit -m "$@" && git push
+}
+
 # disabled because of weird messages in emacs/automator about stty: stdin isnt
 # a terminal
 # stty -ixon # so that ctrl-S can be used in vim

@@ -26,10 +26,6 @@ alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias pdflatex='latex2'
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
-function g22() {
-    ssh -L "$@" sca63@g2-login.coecis.cornell.edu
-}
-
 function latex2() {
     latexmk -pdf "$@" && latexmk -c
 } 

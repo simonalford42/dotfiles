@@ -8,6 +8,7 @@ function trash() {
     mv "$@" ~/trash/
 }
 
+alias cag='conda activate gcsl'
 
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'

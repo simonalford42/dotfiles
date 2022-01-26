@@ -5,13 +5,15 @@ alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias bp="vim ~/dotfiles/*_zshenv.sh"
-alias dotgg="cd ~/dotfiles/ && gp && gg 'update' && cd -"
+
 
 # git aliases
 alias gp='git pull'
 alias gpom='git push'
 alias gst='git status'
 alias gsub='git submodule update --init --recursive'
+alias dotgg="cd ~/dotfiles/ && gp && gg 'update' && cd -"
+alias gpp='git push'
 
 function ga() {
     git add "$@"

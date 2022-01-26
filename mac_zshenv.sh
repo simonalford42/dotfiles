@@ -98,3 +98,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 # had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
 conda deactivate && conda activate base
+
+# opam configuration
+[[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

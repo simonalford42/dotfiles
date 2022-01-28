@@ -61105,6 +61105,8 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.20535793439716313</real>
+	<key>SwitchTabModifier</key>
+	<integer>4</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TabViewType</key>

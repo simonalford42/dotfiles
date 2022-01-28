@@ -16,6 +16,8 @@ alias cornell='ssh sca63@linux.coecis.cornell.edu'
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
 alias g2='ssh -L 8899:sablab-gpu-01.ece.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
 # alias g2='ssh -L 8899:nikola-compute-03.cs.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
+# for vscode, for which command-K doesn't work :/
+alias c='clear'
 
 # other aliases
 alias src='source ~/dotfiles/mac_zshenv.sh'

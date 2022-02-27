@@ -36,4 +36,4 @@ function gg() {
 # a terminal
 # stty -ixon # so that ctrl-S can be used in vim
 # to use vim things in command prompt
-set -o vi
+# set -o vi

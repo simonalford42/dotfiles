@@ -1,5 +1,6 @@
 # aliases
 alias p=python
+alias pt='python -i -c"import torch"'
 alias go="python main.py"
 alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
@@ -36,4 +37,4 @@ function gg() {
 # a terminal
 # stty -ixon # so that ctrl-S can be used in vim
 # to use vim things in command prompt
-set -o vi
+# set -o vi

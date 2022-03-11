@@ -1,5 +1,6 @@
 # aliases
 alias p=python
+alias c='clear'
 alias pt='python -i -c"import torch as t; import torch"'
 alias go="python main.py"
 alias mp='./mypy.sh'

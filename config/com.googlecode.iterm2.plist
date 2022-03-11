@@ -10,6 +10,8 @@
 	<true/>
 	<key>AlternateMouseScroll</key>
 	<false/>
+	<key>BootstrapDaemon</key>
+	<false/>
 	<key>CompactMinimalTabBarHeight</key>
 	<real>22</real>
 	<key>Custom Color Presets</key>

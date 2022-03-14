@@ -15,7 +15,7 @@ alias gp='git pull'
 alias gpom='git push'
 alias gst='git status'
 alias gsub='git submodule update --init --recursive'
-alias dotgg="cd ~/dotfiles/ && gp && gg 'update' && cd -"
+alias dotgg="cd ~/dotfiles/ && gg 'update' && cd -"
 alias dotgp='cd ~/dotfiles/ && gp && cd -'
 alias gpp='git push'
 

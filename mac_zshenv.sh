@@ -1,36 +1,30 @@
 # MAC zshenv
 
-# ssh aliases
-alias bu='ssh -L 5002:127.0.0.1:5005 salford@peterchin8.bu.edu'
-alias mvm2='cd /om2/user/salford/neurosymbolic-modules/bidir-synth && source activate pytorch'
-alias ll="ssh salford@txe1-login.mit.edu"
-alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias om='ssh -Y salford@openmind7.mit.edu'
-alias tb='ssh -L 16006:127.0.0.1:6006 salford@txe1-login.mit.edu'
-alias mlf='ssh -L 5001:127.0.0.1:5000 salford@polestar.mit.edu'
-alias pst='ssh -Y salford@polestar.mit.edu'
-alias athena='ssh -Y salford@athena.dialup.mit.edu'
-# for website
-alias cornell='ssh sca63@linux.coecis.cornell.edu'
-# change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
-# more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
-alias g2='ssh -L 8899:sablab-gpu-01.ece.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
-# alias g2='ssh -L 8899:nikola-compute-03.cs.cornell.edu:8899 sca63@g2-login.coecis.cornell.edu'
-# for vscode, for which command-K doesn't work :/
-alias c='clear'
+# load general settings
+. ~/dotfiles/general_zshenv.sh
 
-# other aliases
 alias src='source ~/dotfiles/mac_zshenv.sh'
-alias mvm="cd ~/Code/neurosymbolic-modules/bidir-synth && conda activate arc2"
-alias clip='ssh -Y salford@polestar.mit.edu "cat ~/.vim/clip.txt" | pbcopy'
-alias scopy='scp -rC sca63@g2-login.coecis.cornell.edu:/home/sca63/to_copy/ ~/'
+alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias pdflatex='latex2'
-alias ibrew="arch -x86_64 /usr/local/bin/brew"
+# brew when m1-native not available
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+
+# ssh aliases
+# ssh without password: https://serverfault.com/a/241593/529924
+ADDR=sca63@g2-login.coecis.cornell.edu
+alias g2='ssh -L 5001:127.0.0.1:5000 $ADDR'
+alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
+alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
+# for cornell webpage
+alias website='ssh sca63@linux.coecis.cornell.edu'
+# change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
+# more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
+alias g2j='ssh -L 8899:sablab-gpu-01.ece.cornell.edu:8899 $ADDR'
 
 function latex2() {
     latexmk -pdf "$@" && latexmk -c
-} 
+}
 
 # when you don't want brew to update before doing stuff
 function brew2() {
@@ -82,8 +76,6 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
-. ~/dotfiles/general_zshenv.sh
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/simon/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -103,3 +95,5 @@ conda deactivate && conda activate base
 
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+

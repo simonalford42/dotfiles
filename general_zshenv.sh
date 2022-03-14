@@ -1,5 +1,7 @@
 # aliases
 alias p=python
+alias c='clear'
+alias pt='python -i -c"import torch as t; import torch"'
 alias go="python main.py"
 alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories

@@ -1,5 +1,6 @@
-# at some point, should separate out cluster-specific from general linux stuff.
+# at some point, can separate out cluster-specific from general linux stuff.
 
+# load general settings
 . ~/dotfiles/general_zshenv.sh
 
 export PATH=${PATH}:/share/apps/anaconda3/2021.05/bin

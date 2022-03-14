@@ -28,7 +28,7 @@ alias mvm='cd ~/abstraction/ && conda activate gcsl'
 alias go='python abstract.py'
 
 # since we don't have ag
-alias grepp='grep -rnw ./ -e'
+alias grepp='grep -rn ./ -e'
 
 # another good one is sacct
 # see gpus available

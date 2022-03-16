@@ -13,7 +13,7 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 # ssh aliases
 # ssh without password: https://serverfault.com/a/241593/529924
 ADDR=sca63@g2-login.coecis.cornell.edu
-alias g2='ssh -L 5001:127.0.0.1:5000 $ADDR'
+alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
 # for cornell webpage

@@ -1,14 +1,14 @@
 # aliases
 alias p=python
 alias c='clear'
-alias pt='python -i -c"import torch as t; import torch"'
+alias pt='python -i -c"import torch as t; import torch; import torch.nn.functional as F; import torch.nn as nn; import numpy as np"'
 alias go="python main.py"
 alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias bp='vim ~/dotfiles/*_zshenv.sh'
+alias pp='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
-
 
 # git aliases
 alias gp='git pull'

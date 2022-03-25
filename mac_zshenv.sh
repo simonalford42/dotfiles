@@ -20,7 +20,8 @@ alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
-alias g2j='ssh -L 8899:sablab-gpu-01.ece.cornell.edu:8899 $ADDR'
+alias g2j='ssh -Y -L 8899:sablab-gpu-01.ece.cornell.edu:8899 $ADDR'
+alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
 
 function latex2() {
     latexmk -pdf "$@" && latexmk -c
@@ -97,3 +98,5 @@ conda deactivate && conda activate base
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 
+
+source /Users/simon/.config/broot/launcher/bash/br

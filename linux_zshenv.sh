@@ -12,7 +12,7 @@ function trash() {
 }
 
 alias cag='conda activate gcsl'
-
+alias ecopy='mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=01:00:00 --mem=16G --partition=default_partition-interactive --pty bash'

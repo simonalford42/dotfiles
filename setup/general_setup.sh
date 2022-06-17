@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # assist in setting up caps lock mods
-# cp ../config/karabiner.json ~/.config/karabiner/assets/complex_modifications
+cp ../config/karabiner.json ~/.config/karabiner/assets/complex_modifications
 
 # SYM LINKING DOTFILES TO HOME DIRECTORY 
 

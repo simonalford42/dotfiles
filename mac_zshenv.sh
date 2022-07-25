@@ -101,3 +101,9 @@ conda deactivate && conda activate base
 
 
 source /Users/simon/.config/broot/launcher/bash/br
+
+[ -f "/Users/simon/.ghcup/env" ] && source "/Users/simon/.ghcup/env" # ghcup-env
+
+# for llvm, from bash rec, see https://apple.stackexchange.com/a/434462/308005
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"

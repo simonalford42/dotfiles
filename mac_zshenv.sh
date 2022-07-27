@@ -16,6 +16,7 @@ ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
+alias scopy2='trash ~/to_copy && scp -rC $ADDR:/home/sca63/to_copy/ ~/ && cp ~/to_copy/models.txt ~/Code/abstraction/ && cp ~/to_copy/*.pt ~/Code/abstraction/models/'
 # for cornell webpage
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
@@ -100,3 +101,9 @@ conda deactivate && conda activate base
 
 
 source /Users/simon/.config/broot/launcher/bash/br
+
+[ -f "/Users/simon/.ghcup/env" ] && source "/Users/simon/.ghcup/env" # ghcup-env
+
+# for llvm, from bash rec, see https://apple.stackexchange.com/a/434462/308005
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"

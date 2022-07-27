@@ -7,7 +7,7 @@ alias mp='./mypy.sh'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias bp='vim ~/dotfiles/*_zshenv.sh ~/dotfiles/tldr.sh*'
-alias pp='vim ~/dotfiles/tldr.sh'
+alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 
 # git aliases

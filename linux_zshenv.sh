@@ -11,8 +11,17 @@ function trash() {
     mv "$@" ~/trash/
 }
 
+function model_copy() {
+    cp "$@" ~/to_copy/
+
+}
+
+function model_copy2() {
+    cp ~/abstraction/out/models.txt ~/to_copy/
+}
+
 alias cag='conda activate gcsl'
-alias ecopy='mv ~/to_copy/* ~/trash/'
+alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=01:00:00 --mem=16G --partition=default_partition-interactive --pty bash'
@@ -32,7 +41,7 @@ alias mvm='cd ~/abstraction/ && conda activate gcsl'
 alias go='python abstract.py'
 
 # since we don't have ag
-alias grepp='grep -rn ./ -e'
+alias grepp='grep --include \*.py -rn ./ -e'
 
 # another good one is sacct
 # see gpus available

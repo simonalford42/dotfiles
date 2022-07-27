@@ -19,6 +19,8 @@ alias gsub='git submodule update --init --recursive'
 alias dotgg="cd ~/dotfiles/ && gg 'update' && cd -"
 alias dotgp='cd ~/dotfiles/ && gp && cd -'
 alias gpp='git push'
+# grep colored output
+alias grep='grep --color=always'
 
 function ga() {
     git add "$@"
@@ -42,5 +44,3 @@ function gg() {
 # to use vim things in command prompt
 # set -o vi
 
-# grep colored output
-export GREP_OPTIONS='--color=always'

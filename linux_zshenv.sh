@@ -48,3 +48,6 @@ alias grepp='grep --include \*.py -rn ./ -e'
 alias sinfo2='sinfo -o "%20N  %10c  %10m  %25f  %10G "'
 
 tmux at
+
+# for gpg key github? https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
+export GPG_TTY=$(tty)

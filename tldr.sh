@@ -9,3 +9,5 @@ pytest --last-failed
 # python string format to 2 decimal places
 a = 5/3; print(f'{a:.2f}')
 
+# find text in files
+grep -rnw '/path/to/somewhere/' -e 'pattern'

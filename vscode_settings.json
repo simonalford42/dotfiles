@@ -1,0 +1,425 @@
+{
+    "editor.hideCursorInOverviewRuler": true,
+    "python.defaultInterpreterPath": "",
+    "editor.lineNumbers": "relative",
+    "editor.scrollBeyondLastLine": false,
+    "editor.lineDecorationsWidth": 10,
+    "editor.glyphMargin": false,
+    "editor.folding": false,
+    "editor.rulers": [
+      {
+        "column": 80,    // spacing of 1st column from left
+        "color": "#3f3d2a"   // orange, Go Vols!
+      },
+      {
+       "column": 100,      // third ruler
+       "color": "#3f3d2a"  // purple, go Pirates!
+      },
+   ],
+
+   // enable explorer list navigation, neovim https://github.com/vscode-neovim/vscode-neovim
+    "workbench.list.automaticKeyboardNavigation": false,
+    "workbench.colorCustomizations": { "editorRuler.foreground": "#ff4081"},
+    "files.trimTrailingWhitespace": true,
+
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.highlightedyank.enable": true,
+    "vim.leader": "<space>",
+    "vim.visualstar": true,
+
+    "vim.normalModeKeyBindings": [
+      { "before": ["<CR>"], "after": ["m", "o", "o", "<ESC>", "`", "o"]},
+      { "before": ["<LEADER>", "<CR>"], "after": ["m", "o", "O", "<ESC>", "`", "o", "j"]},
+      {"before": ["K"], "after": ["^"], },
+      { "before": ["<BS>"], "after": ["<", "<"], },
+      { "before": ["<TAB>"], "after": [">", ">"], },
+      // TODO: need to make commands work from the outline
+      // { "before": ["g", "b"], "after": [], "commands": ["workbench.action.openSettingsJson"] },
+      // { "before": ["g", "h"], "after": [], "commands": ["outline.focus"], },
+      // { "before": ["g", "H"], "after": [], "commands": ["workbench.explorer.fileView.focus"], },
+      // { "before": ["g", "n"], "after": [], "commands": ["workbench.action.focusActiveEditorGroup"], },
+
+      { "before": ["<C-k>"], "after": [], "commands": ["workbench.action.nextEditor"] },
+      { "before": ["<C-j>"], "after": [], "commands": ["workbench.action.previousEditor"] },
+      // for deleting, changing, etc. into black hole register
+      { "before": ["<LEADER>", "b"], "after": ["\"", "_"], },
+      { "before": ["<LEADER>", "c"], "after": [], "commands": ["editor.action.commentLine"] },
+      { "before": ["<LEADER>", "h"], "after": [], "commands": [":set hlsearch!"], },
+
+      { "before": ["<LEADER>", "p"], "after": ["o", "p", "r", "i", "n", "t", "(", "f", "'", ":", " ", "{", "}", "<ESC>", "P", "K", "f", "'", "p", "K"]},
+      { "before": ["<LEADER>", "P"], "after": ["y", "e", "<LEADER>", "p"]},
+      { "before": ["<LEADER>", "["], "after": ["o", "p", "r", "i", "n", "t", "(", "f", "'", ":", " ", "{", "}", "<ESC>", "P", "a", ".", "s", "h", "a", "p", "e", "<ESC>", "K", "f", "'", "p", "K"]},
+
+      { "before": ["<LEADER>", "r"], "after": ["@", "@"], },
+
+      { "before": ["g", "b"], "after": [], "commands": ["workbench.action.openSettingsJson"]},
+
+      { "before": ["<LEADER>", "a"], "after": [], "commands": ["workbench.action.openEditorAtIndex1"] },
+      { "before": ["<LEADER>", "s"], "after": [], "commands": ["workbench.action.openEditorAtIndex2"] },
+      { "before": ["<LEADER>", "d"], "after": [], "commands": ["workbench.action.openEditorAtIndex3"] },
+      { "before": ["<LEADER>", "f"], "after": [], "commands": ["workbench.action.openEditorAtIndex4"] },
+      { "before": ["<LEADER>", "g"], "after": [], "commands": ["workbench.action.openEditorAtIndex5"] },
+      { "before": ["<LEADER>", "h"], "after": [], "commands": ["workbench.action.openEditorAtIndex6"] },
+      { "before": ["<LEADER>", "j"], "after": [], "commands": ["workbench.action.openEditorAtIndex7"] },
+      { "before": ["<LEADER>", "k"], "after": [], "commands": ["workbench.action.openEditorAtIndex8"] },
+      { "before": ["<LEADER>", "l"], "after": [], "commands": ["workbench.action.openEditorAtIndex9"] },
+      { "before": ["<LEADER>", ";"], "after": [], "commands": ["workbench.action.openEditorAtIndex10"] },
+      { "before": ["<LEADER>", "'"], "after": [], "commands": ["workbench.action.openEditorAtIndex11"] },
+    ],
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+      { "before": [":"], "after": [";"] },
+      { "before": [";"], "after": [":"] },
+      { "before": ["Y"], "after": ["y", "$"]},
+      // indent to parenthesis above; useful in python code
+      { "before": ["<LEADER>", "i"], "after": ["k", "0", "y", "f", "(", "j", "^", "h", "v", "0", "P", "v", "0", "r", " ", "^" ]},
+      // indent to bracket above; useful in python code
+      { "before": ["<LEADER>", "I"], "after": ["k", "0", "y", "f", "[", "j", "^", "h", "v", "0", "P", "v", "0", "r", " ", "^" ]},
+      // indent to line above's indentation
+      { "before": ["<LEADER>", "o"], "after": ["k", "0", "y", "^", "j", "^", "h", "v", "0", "P", "v", "0", "r", " ", "^" ]},
+      // jump to definition puts function at top of page
+      // { "before": ["g", "d"], "after": ["g", "d", "z", "t"] },
+      // disable yanking when deleting. TODO: make a new "cut" command for these.
+      // { "before": [ "d" ], "after": [ "\"", "_", "d" ] },
+      // { "before": [ "D" ], "after": [ "\"", "_", "D" ] },
+      // { "before": [ "d", "d" ], "after": [ "\"", "_", "d", "d" ] },
+      // { "before": [ "c" ], "after": [ "\"", "_", "c" ] },
+      // { "before": [ "C" ], "after": [ "\"", "_", "C" ] },
+      // { "before": [ "c", "c" ], "after": [ "\"", "_", "c", "c" ] },
+    ],
+
+    "vim.insertModeKeyBindings": [
+      // when in insert mode, Control-H adds closing parenthesis at end of line and exits mode
+      { "before": ["<C-h>"], "after": ["<ESC>", "A", ")", "<ESC>"] },
+      // { "before": ["<ESC>"], "after": ["<ESC>"], "commands": ["workbench.action.files.save"] },
+    ],
+
+    "vim.visualModeKeyBindings": [
+        // in visual mode, shifting text maintains selection
+      { "before": ["<"], "after": ["<", "g", "v"], },
+      { "before": [">"], "after": [">", "g", "v"], },
+      // hey, we might want to do this in visual mode too, idk
+      { "before": ["<C-k>"], "after": [], "commands": ["workbench.action.nextEditor"] },
+      { "before": ["<C-j>"], "after": [], "commands": ["workbench.action.previousEditor"] },
+      { "before": ["<LEADER>", "c"], "after": [], "commands": ["editor.action.commentLine"] },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      { "before": [";"], "after": [":"], },
+      { "before": [":"], "after": [";"], },
+      // Bind p in visual mode to paste without overriding the current register
+      { "before": [ "p", ], "after": [ "p", "g", "v", "y" ] }
+    ],
+
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.useSystemClipboard": true,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "outline.showConstants": false,
+    "outline.showBooleans": false,
+    "outline.showArrays": false,
+    "outline.showFields": false,
+    "outline.showVariables": false,
+    "terminal.integrated.commandsToSkipShell": [
+      "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": true,
+    "git.enableStatusBarSync": false,
+    "git.decorations.enabled": false,
+    "git.countBadge": "off",
+    "problems.decorations.enabled": false,
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    "python.languageServer": "Default",
+    "outline.showModules": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8CategorySeverity.E": "Warning",
+    "python.linting.flake8CategorySeverity.F": "Warning",
+    "python.linting.flake8Args": [
+      "--ignore=F541, W503, E226, E127, E401, E702, E231, E266, F401, E501"
+    ],
+    "python.linting.mypyEnabled": true,
+    "files.insertFinalNewline": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.referenceSearch.trigger",
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
+    "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+    "terminal.integrated.scrollback": 10000,
+    "editor.occurrencesHighlight": false,
+    "editor.selectionHighlight": false,
+    "explorer.confirmDelete": false,
+    "files.exclude": {
+      ".*": true
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "files.autoSave": "onFocusChange",
+    "latex-workshop.latex.tools": [
+
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {"TEXMFHOME": "/Library/TeX/texbin/"}
+      },
+      {
+        "name": "lualatexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-lualatex",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "xelatexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-xelatex",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "latexmk_rconly",
+        "command": "latexmk",
+        "args": [
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+          "%DOCFILE%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "rnw2tex",
+        "command": "Rscript",
+        "args": [
+          "-e",
+          "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+        ],
+        "env": {}
+      },
+      {
+        "name": "jnw2tex",
+        "command": "julia",
+        "args": [
+          "-e",
+          "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+        ],
+        "env": {}
+      },
+      {
+        "name": "jnw2texmintex",
+        "command": "julia",
+        "args": [
+          "-e",
+          "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+        ],
+        "env": {}
+      },
+      {
+        "name": "tectonic",
+        "command": "tectonic",
+        "args": [
+          "--synctex",
+          "--keep-logs",
+          "%DOC%.tex"
+        ],
+        "env": {}
+      }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "latexmk 🔃",
+        "tools": [
+          "latexmk"
+        ]
+      },
+      {
+        "name": "latexmk (latexmkrc)",
+        "tools": [
+          "latexmk_rconly"
+        ]
+      },
+      {
+        "name": "latexmk (lualatex)",
+        "tools": [
+          "lualatexmk"
+        ]
+      },
+      {
+        "name": "latexmk (xelatex)",
+        "tools": [
+          "xelatexmk"
+        ]
+      },
+      {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": [
+          "pdflatex",
+          "bibtex",
+          "pdflatex",
+          "pdflatex"
+        ]
+      },
+      {
+        "name": "Compile Rnw files",
+        "tools": [
+          "rnw2tex",
+          "latexmk"
+        ]
+      },
+      {
+        "name": "Compile Jnw files",
+        "tools": [
+          "jnw2tex",
+          "latexmk"
+        ]
+      },
+      {
+        "name": "tectonic",
+        "tools": [
+          "tectonic"
+        ]
+      }
+    ],
+    "editor.wordWrap": "on",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/simon/.vim/init.vim",
+    "vscode-neovim.highlightGroups.highlights": {
+
+      "Directory": "vim",
+      "IncSearch": {
+        "backgroundColor": "theme.editor.findMatchBackground",
+        "borderColor": "theme.editor.findMatchBorder"
+      },
+      "Search": {
+        "backgroundColor": "theme.editor.findMatchHighlightBackground",
+        "borderColor": "theme.editor.findMatchHighlightBorder"
+      },
+      "Visual": {
+        "backgroundColor": "theme.editor.selectionBackground"
+      },
+      "Conceal": "vim",
+      "Substitute": "vim"
+    },
+    "vscode-neovim.highlightGroups.ignoreHighlights": [
+
+
+      "SpecialKey",
+      "EndOfBuffer",
+      "TermCursor",
+      "TermCursorNC",
+      "NonText",
+      "ErrorMsg",
+      "MoreMsg",
+      "ModeMsg",
+      "LineNr",
+      "CursorLineNr",
+      "Question",
+      "StatusLine",
+      "StatusLineNC",
+      "VertSplit",
+      "Title",
+      "VisualNC",
+      "WarningMsg",
+      "WildMenu",
+      "^Diff",
+      "Sign",
+      "SignColumn",
+      "^Spell",
+      "^Pmenu",
+      "^Tab",
+      "^Cursor",
+      "ColorColumn",
+      "QuickFixLine",
+      "Whitespace",
+      "NormalNC",
+      "Normal",
+      "NormalFloat",
+      "MsgSeparator",
+      "MsgArea",
+      "^RedrawDebug",
+      "Cursor",
+      "lCursor",
+      "MatchParen",
+      "^Nvim",
+      "Operator",
+      "Delimiter",
+      "Identifier",
+      "SpecialChar",
+      "Number",
+      "Type",
+      "String",
+      "Error",
+      "Comment",
+      "Constant",
+      "Special",
+      "Statement",
+      "PreProc",
+      "Underlined",
+      "Ignore",
+      "Todo",
+      "Character",
+      "Boolean",
+      "Float",
+      "Function",
+      "Conditional",
+      "Repeat",
+      "Label",
+      "Keyword",
+      "Exception",
+      "Include",
+      "Define",
+      "Macro",
+      "PreCondit",
+      "StorageClass",
+      "Structure",
+      "Typedef",
+      "Tag",
+      "SpecialComment",
+      "Debug",
+      "Folded",
+      "FoldColumn"
+    ],
+    "editor.inlineSuggest.enabled": true,
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+}

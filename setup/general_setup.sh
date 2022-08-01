@@ -3,7 +3,7 @@
 # assist in setting up caps lock mods
 cp ../config/karabiner.json ~/.config/karabiner/assets/complex_modifications
 
-# SYM LINKING DOTFILES TO HOME DIRECTORY 
+# SYM LINKING DOTFILES TO HOME DIRECTORY
 
 # -s is for symbolic link, -i means give an error if link already exists
 
@@ -29,3 +29,4 @@ ln -si /Users/simon/dotfiles/mac_zshenv.sh /Users/simon/.bashrc
 ln -si /Users/simon/dotfiles/tmux.conf /Users/simon/.tmux.conf
 ln -si /Users/simon/dotfiles/flake8 /Users/simon/.config/flake8
 ln -si /Users/simon/dotfiles/global_gitignore /Users/simon/.gitignore
+ln -si /Users/simon/dotfiles/vscode_settings.json /Users/simon/Library/Application\ Support/Code/User/settings.json

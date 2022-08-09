@@ -27,6 +27,8 @@ alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=01:00:00 --mem=16G --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=01:00:00 --mem=16G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=01:00:00 --mem=16G --partition=ellis-interactive --pty bash'
+alias gpujobe1='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=01:00:00 --mem=16G --nodelist=ellis-compute-01 --pty bash'
+alias gpujobe2='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=01:00:00 --mem=16G --nodelist=ellis-compute-02 --pty bash'
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 

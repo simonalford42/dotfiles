@@ -28,6 +28,7 @@ function gpujobet() {
     srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --mem=16G --partition=ellis-interactive "$@" --pty bash
 }
 
+alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias cag='conda activate gcsl'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'

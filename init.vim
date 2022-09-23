@@ -38,24 +38,17 @@ nnoremap <silent> <CR> :<C-u>call append(line("."),   repeat([""], v:count1))<CR
 " <Leader> enter adds new line above
 nnoremap <silent> <SPACE><CR> :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
 
-" break line, but stay at current spot?
-nnoremap <SPACE>] i<CR><ESC>k$
-
-" toggle hlsearch
-noremap <silent> <SPACE>6 :set hlsearch!<CR>
-
 " indent to parentheses above
 " note: does not work if there's not whitespace
 noremap <SPACE>i k0yf(j^hv0p:s/\%V./ /g<CR>
-
-" make an enumerate clause for latex
-" noremap <SPACE>le o\begin{enumerate}[label=(\alph*)]<ESC>o<ESC>I\item<ESC>o<ESC>I\end{enumerate}<ESC>kA
 
 " indent to line above's indentation
 noremap <SPACE>o k0y^j^hv0pv0<ESC>:s/\%V./ /g<CR>:noh<CR>
 
 " make print statement for yanked variable at current line
-noremap <SPACE>p oprint(f"<ESC>pa: {<ESC>pa}")<ESC>
+noremap <SPACE>p oprint(f"{<ESC>pa=}")<ESC>
+" make shape print statement for yanked variable at current line
+noremap <SPACE>q oprint(f"{<ESC>pa.shape=}")<ESC>
 
 " repeat last macro
 noremap <SPACE>r @@
@@ -63,6 +56,13 @@ noremap <SPACE>r @@
 " put a python comment above the line, instead of at end of line.
 " extra work needed to delete trailing whitespace.
 noremap <SPACE># ma$F#DV:s/\s\+$//e<CR>O<C-R>"<ESC>`a
+
+noremap <silent> <SPACE>6 :set hlsearch!<CR>
+
+nnoremap <SPACE>] i<CR><ESC>k$
+
+" toggle hlsearch
+noremap <silent> <SPACE>6 :set hlsearch!<CR>
 
 " g remappings. For more code/python related stuff but not strict.
 
@@ -84,6 +84,8 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=52})
 augroup END
 
+" comment lines
+noremap <SPACE>c <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
 " moving to tabs
 noremap <SPACE>a <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex1')<CR>
 noremap <SPACE>s <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex2')<CR>

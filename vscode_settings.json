@@ -19,7 +19,11 @@
 
    // enable explorer list navigation, neovim https://github.com/vscode-neovim/vscode-neovim
     "workbench.list.automaticKeyboardNavigation": false,
-    "workbench.colorCustomizations": { "editorRuler.foreground": "#ff4081"},
+    "workbench.colorCustomizations": {
+      "editorRuler.foreground": "#ff4081",
+      "editor.selectionBackground": "#ae8c2d",
+      "editor.selectionHighlightBackground": "#ae8c2d"
+    },
     "files.trimTrailingWhitespace": true,
 
     "zenMode.fullScreen": false,
@@ -47,7 +51,7 @@
     "python.linting.flake8CategorySeverity.E": "Warning",
     "python.linting.flake8CategorySeverity.F": "Warning",
     "python.linting.flake8Args": [
-      "--ignore=F541, W503, E226, E127, E401, E702, E231, E266, F401, E501"
+      "--ignore=F541, W503, E226, E127, E401, E702, E231, E266, F401, E501, E741"
     ],
     "python.linting.mypyEnabled": true,
     "files.insertFinalNewline": true,
@@ -64,7 +68,6 @@
     "files.exclude": {
       ".*": true
     },
-    "workbench.colorTheme": "Atom One Dark",
     "files.autoSave": "onFocusChange",
     "latex-workshop.latex.tools": [
 
@@ -332,4 +335,10 @@
     "jupyter.askForKernelRestart": false,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "github.copilot.advanced": {
+
+    },
 }

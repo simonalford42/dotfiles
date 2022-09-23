@@ -11,3 +11,6 @@ a = 5/3; print(f'{a:.2f}')
 
 # find text in files
 grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+# update submodule
+# https://stackoverflow.com/questions/8191299/update-a-submodule-to-the-latest-commit/8191413#8191413

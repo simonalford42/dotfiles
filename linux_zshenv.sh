@@ -30,6 +30,7 @@ function gpujobet() {
 
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias cag='conda activate gcsl'
+alias ca='conda activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'

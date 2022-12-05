@@ -3,7 +3,7 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
-export PATH=${PATH}:/share/apps/anaconda3/2021.05/bin
+export PATH=:/share/apps/anaconda3/2021.05-with-pytorch/bin:$PATH
 # bin folder that doesn't require sudo access
 export PATH=$PATH:$HOME/bin
 
@@ -29,8 +29,7 @@ function gpujobet() {
 }
 
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
-alias cag='conda activate gcsl'
-alias ca='conda activate'
+alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
@@ -49,12 +48,9 @@ alias sq='squeue -u sca63'
 alias scu='scancel -u sca63'
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 
-# moving to places, running common code
-alias mvm='cd ~/abstraction/ && conda activate gcsl'
-alias go='python abstract.py'
-
 # since we don't have ag
-alias grepp='grep --include \*.py -rn ./ -e'
+alias grepp='grep --include \*.py -n ./ -e'
+alias greppr='grep --include \*.py -rn ./ -e'
 
 # another good one is sacct
 # see gpus available

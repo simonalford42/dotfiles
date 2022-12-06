@@ -341,4 +341,5 @@
     "github.copilot.advanced": {
 
     },
+    "workbench.editor.enablePreview": false,
 }

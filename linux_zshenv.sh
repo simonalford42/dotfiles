@@ -1,5 +1,7 @@
 # at some point, can separate out cluster-specific from general linux stuff.
 
+# you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
+
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 

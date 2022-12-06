@@ -23,7 +23,7 @@ alias single_file2='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
-alias g2j='ssh -Y -L 8899:sablab-gpu-01.ece.cornell.edu:8899 $ADDR'
+alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
 
 function latex2() {
@@ -82,17 +82,21 @@ export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/simon/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/simon/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/simon/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/simon/miniforge3/bin:$PATH"
+        export PATH="/Users/simon/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 # had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
 conda deactivate && conda activate base

@@ -69,12 +69,14 @@ noremap <silent> <SPACE>6 :set hlsearch!<CR>
 " open vimrc TODO not working?
 " noremap gb :e ~/dotfiles/init.vim<CR>
 
+" go to definition
+noremap gd <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+
 " source vimrc
 noremap gm :so ~/dotfiles/init.vim<CR>:echo "sourced ~/dotfiles/init.vim"<CR>
 
 " bash shebang
 noremap gs i#!/usr/bin/env bash<ESC>
-noremap gd gdzt
 
 noremap gt :!mv <C-R>% ~/trash/ <CR>:bp\|bd #<CR>:echo "moved file to trash"<CR>:bn<CR>
 

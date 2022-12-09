@@ -1,6 +1,7 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
+alias mamba=micromamba
 alias src='source ~/dotfiles/mac_zshenv.sh'
 alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'

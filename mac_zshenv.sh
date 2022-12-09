@@ -1,5 +1,3 @@
-# MAC zshenv
-
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 

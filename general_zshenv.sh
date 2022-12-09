@@ -32,7 +32,7 @@ function dotgg() {
     message="update"
   fi
 
-  cd ~/dotfiles/ && gg message && cd -
+  cd ~/dotfiles/ && gg $message && cd -
 }
 
 function gcm() {

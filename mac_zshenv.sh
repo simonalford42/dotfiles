@@ -1,5 +1,3 @@
-# MAC zshenv
-
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
@@ -10,8 +8,7 @@ alias pdflatex='latex2'
 # brew when m1-native not available
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
-# ssh aliases
-# ssh without password: https://serverfault.com/a/241593/529924
+# SSH ALIASES
 ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
@@ -73,7 +70,6 @@ export PATH=${PATH}:/usr/texbin
 # Kivy settings for preferences and logging
 export KIVY_HOME="${HOME}/.kivy"
 
-
 # for jekyll; see https://jekyllrb.com/docs/installation/macos/ (12/27/21)
 export SDKROOT=$(xcrun --show-sdk-path)
 
@@ -94,13 +90,16 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
 # had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
-conda deactivate && conda activate base
+# conda deactivate && conda activate base
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
 
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-
 
 source /Users/simon/.config/broot/launcher/bash/br
 

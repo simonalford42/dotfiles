@@ -24,7 +24,8 @@ function ga() {
 }
 
 function dotgg() {
-    cd ~/dotfiles/ && gg "${1:update}" && cd -
+    echo "${1:update}"
+    # cd ~/dotfiles/ && gg "${1:update}" && cd -
 }
 
 function gcm() {

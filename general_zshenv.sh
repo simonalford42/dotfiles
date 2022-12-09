@@ -24,8 +24,15 @@ function ga() {
 }
 
 function dotgg() {
-    echo "${1:update}"
-    # cd ~/dotfiles/ && gg "${1:update}" && cd -
+  # If an argument is provided, use it as the message to echo
+  if [ -n "$1" ]; then
+    message="$1"
+  # Otherwise, use the default message
+  else
+    message="update"
+  fi
+
+  cd ~/dotfiles/ && gg message && cd -
 }
 
 function gcm() {

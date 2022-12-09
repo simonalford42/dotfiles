@@ -342,4 +342,5 @@
 
     },
     "workbench.editor.enablePreview": false,
+    "python.terminal.activateEnvironment": false,
 }

@@ -80,31 +80,12 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/simon/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
 if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
 fi
-# <<< conda initialize <<<
-# had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
-conda deactivate && conda activate base
 
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-
 
 source /Users/simon/.config/broot/launcher/bash/br
 

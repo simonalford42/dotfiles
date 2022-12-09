@@ -27,7 +27,6 @@ function dotgg() {
   # If an argument is provided, use it as the message to echo
   if [ -n "$1" ]; then
     message="$1"
-  # Otherwise, use the default message
   else
     message="update"
   fi

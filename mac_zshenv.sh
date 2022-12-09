@@ -78,10 +78,6 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
-if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
-fi
-
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
@@ -92,3 +88,20 @@ source /Users/simon/.config/broot/launcher/bash/br
 # for llvm, from bash rec, see https://apple.stackexchange.com/a/434462/308005
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE="/usr/local/bin/micromamba";
+export MAMBA_ROOT_PREFIX="/Users/simon/micromamba";
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    if [ -f "/Users/simon/micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "/Users/simon/micromamba/etc/profile.d/micromamba.sh"
+    else
+        export  PATH="/Users/simon/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+    fi
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<

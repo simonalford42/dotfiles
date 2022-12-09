@@ -20,6 +20,10 @@ alias gpp='git push'
 # grep colored output
 alias grep='grep --color=always'
 
+function dotgg() {
+    cd ~/dotfiles/ && gg "${1:update}" && cd -
+}
+
 function ga() {
     git add "$@"
 }

@@ -1,7 +1,6 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
-alias mamba=micromamba
 alias src='source ~/dotfiles/mac_zshenv.sh'
 alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
@@ -38,6 +37,13 @@ function brew2() {
 latte () {
     s=${1%tex}pdf
     pdflatex $1
+    open -a "Preview" $s
+}
+
+# compile graphviz from vim
+graphit() {
+    s=${1%gv}pdf
+    dot -Tpdf $1 -o $s
     open -a "Preview" $s
 }
 
@@ -90,19 +96,22 @@ source /Users/simon/.config/broot/launcher/bash/br
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE="/usr/local/bin/micromamba";
-export MAMBA_ROOT_PREFIX="/Users/simon/micromamba";
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/Users/simon/micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "/Users/simon/micromamba/etc/profile.d/micromamba.sh"
+    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
     else
-        export  PATH="/Users/simon/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export PATH="/Users/simon/mambaforge/bin:$PATH"
     fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+unset __conda_setup
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

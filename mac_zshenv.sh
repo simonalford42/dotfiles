@@ -41,6 +41,13 @@ latte () {
 }
 
 # compile graphviz from vim
+graphitt() {
+    s=${1%gv}pdf
+    neato -Tpdf $1 -o $s
+    open -a "Preview" $s
+}
+
+# compile graphviz from vim
 graphit() {
     s=${1%gv}pdf
     dot -Tpdf $1 -o $s

@@ -54,6 +54,13 @@ graphit() {
     open -a "Preview" $s
 }
 
+# compile graphviz from vim
+graphitpng() {
+    s=${1%gv}png
+    dot -Tpng $1 -o $s
+    open -a "Preview" $s
+}
+
 # for compiling biblatex from vim
 latte2 () {
     s=${1%tex}pdf

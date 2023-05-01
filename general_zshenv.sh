@@ -14,7 +14,6 @@ alias gp='git pull'
 alias gpom='git push'
 alias gst='git status'
 alias gsub='git submodule update --init --recursive'
-alias dotgg="cd ~/dotfiles/ && gg 'update' && cd -"
 alias dotgp='cd ~/dotfiles/ && gp && cd -'
 alias gpp='git push'
 # grep colored output
@@ -22,6 +21,17 @@ alias grep='grep --color=always'
 
 function ga() {
     git add "$@"
+}
+
+function dotgg() {
+  # If an argument is provided, use it as the message to echo
+  if [ -n "$1" ]; then
+    message="$1"
+  else
+    message="update"
+  fi
+
+  cd ~/dotfiles/ && gg $message && cd -
 }
 
 function gcm() {

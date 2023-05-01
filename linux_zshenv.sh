@@ -1,5 +1,7 @@
 # at some point, can separate out cluster-specific from general linux stuff.
 
+# you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
+
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
@@ -55,6 +57,13 @@ alias greppr='grep --include \*.py -rn ./ -e'
 # another good one is sacct
 # see gpus available
 alias sinfo2='sinfo -o "%20N  %10c  %10m  %25f  %10G "'
+
+alias ysq='squeue -o "%.9i %.9P %80j %.15u %.8T %.10M %.9l %.6D %R"' # squeue with some addition info
+alias ysqm='sq -u $USER' # sq for my jobs only
+alias ysqmo='squeue -o "%.9i %.9P %80j %.15u %.8T %.10M %.9l %.6D %R %o" -u $USER' # sqm + showing the command as well
+alias ysp='squeue -t PENDING -o "%.8Q %.10i %.3P %.9j %.6u %.2t %.16S %.10M %.10l %.5D %.12b %.2c %.4m %R" -S -t,-p,i | less -N ' # show all pending jobs
+alias ysia='sinfo -o "%15P %.5a %.10l %.10s %.4r %.8h %.10g %.6D %.11T %15G %N"'
+alias ysqa='cat /share/ellis/g2_usage/sacct'
 
 tmux at
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# or maybe??
+#!/bin/zsh
 
 # https://stackoverflow.com/a/36539692/4383594
 # You can use -k option to run specific test cases

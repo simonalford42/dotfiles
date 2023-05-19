@@ -1,6 +1,9 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
+alias vm='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/amd64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
+alias vmu='docker pull charlessherk/cs4120-vm'
+alias vm2='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/x86-64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
 alias src='source ~/dotfiles/mac_zshenv.sh'
 alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'

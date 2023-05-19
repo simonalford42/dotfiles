@@ -343,4 +343,8 @@
     },
     "workbench.editor.enablePreview": false,
     "python.terminal.activateEnvironment": false,
+    "[python]": {
+      "editor.formatOnType": true
+    },
+    "workbench.statusBar.visible": false,
 }

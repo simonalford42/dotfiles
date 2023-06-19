@@ -337,7 +337,6 @@
     "editor.autoClosingQuotes": "never",
     "workbench.editor.focusRecentEditorAfterClose": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "workbench.colorTheme": "Atom One Dark",
     "github.copilot.advanced": {
 
     },
@@ -347,4 +346,8 @@
       "editor.formatOnType": true
     },
     "workbench.statusBar.visible": false,
+    "mypy.enabled": false,
+    "workbench.iconTheme": null,
+    "editor.semanticHighlighting.enabled": true,
+    "workbench.colorTheme": "Solarized Dark",
 }

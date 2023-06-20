@@ -1,5 +1,9 @@
 " neovim settings for vscode
 
+
+" use system clipboard: https://stackoverflow.com/a/8757876/4383594
+set clipboard=unnamedplus
+
 nmap <S-tab> <<
 
 "make < > shifts keep selection

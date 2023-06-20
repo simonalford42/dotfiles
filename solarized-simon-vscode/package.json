@@ -1,10 +1,10 @@
 {
-  "name": "simon",
+  "name": "solarized-simon",
   "displayName": "solarized-simon",
   "description": "solarized simon",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "engines": {
-    "vscode": "^1.79.0"
+    "vscode": "^1.78.2"
   },
   "categories": [
     "Themes"
@@ -17,5 +17,10 @@
         "path": "./themes/solarized-simon-color-theme.json"
       }
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonalford42/dotfiles.git"
+  },
+  "publisher": "SimonAlford"
 }

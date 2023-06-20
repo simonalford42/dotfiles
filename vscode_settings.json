@@ -349,5 +349,6 @@
     "mypy.enabled": false,
     "workbench.iconTheme": null,
     "editor.semanticHighlighting.enabled": true,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "solarized-simon",
+    "workbench.startupEditor": "none",
 }

@@ -60,7 +60,6 @@
     "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
     "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
     "terminal.integrated.scrollback": 10000,
     "editor.occurrencesHighlight": false,
     "editor.selectionHighlight": false,

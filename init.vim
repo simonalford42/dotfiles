@@ -100,10 +100,9 @@ noremap <SPACE>f <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex4')<C
 noremap <SPACE>g <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex5')<CR>
 noremap <SPACE>h <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex6')<CR>
 noremap <SPACE>j <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex7')<CR>
-noremap <SPACE>j <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex8')<CR>
-noremap <SPACE>k <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex9')<CR>
-noremap <SPACE>l <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex10')<CR>
-noremap <SPACE>; <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex11')<CR>
+noremap <SPACE>k <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex8')<CR>
+noremap <SPACE>l <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex9')<CR>
+noremap <SPACE>; <Cmd>call VSCodeNotify('workbench.action.openEditorAtIndex10')<CR>
 
 " help
 " https://stackoverflow.com/questions/2483849/detect-if-a-key-is-bound-to-something-in-vim

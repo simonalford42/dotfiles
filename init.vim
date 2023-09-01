@@ -46,9 +46,9 @@ noremap <SPACE>i k0yf(j^hv0p:s/\%V./ /g<CR>
 noremap <SPACE>o k0y^j^hv0pv0<ESC>:s/\%V./ /g<CR>:noh<CR>
 
 " make print statement for yanked variable at current line
-noremap <SPACE>p oprint(f"{<ESC>pa=}")<ESC>
+noremap <SPACE>p oprint(f'{<ESC>pa=}')<ESC>
 " make shape print statement for yanked variable at current line
-noremap <SPACE>q oprint(f"{<ESC>pa.shape=}")<ESC>
+noremap <SPACE>q oprint(f'{<ESC>pa.shape=}')<ESC>
 
 " repeat last macro
 noremap <SPACE>r @@

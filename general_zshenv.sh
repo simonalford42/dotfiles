@@ -1,4 +1,5 @@
 # aliases
+alias mb=mamba
 alias p=python
 alias c='clear'
 alias pt='python -i -c"import torch as t; import torch; import torch.nn.functional as F; import torch.nn as nn; import numpy as np"'

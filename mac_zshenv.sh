@@ -39,6 +39,27 @@ latte () {
     open -a "Preview" $s
 }
 
+# compile graphviz from vim
+graphitt() {
+    s=${1%gv}pdf
+    neato -Tpdf $1 -o $s
+    open -a "Preview" $s
+}
+
+# compile graphviz from vim
+graphit() {
+    s=${1%gv}pdf
+    dot -Tpdf $1 -o $s
+    open -a "Preview" $s
+}
+
+# compile graphviz from vim
+graphitpng() {
+    s=${1%gv}png
+    dot -Tpng $1 -o $s
+    open -a "Preview" $s
+}
+
 # for compiling biblatex from vim
 latte2 () {
     s=${1%tex}pdf
@@ -76,6 +97,7 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
+<<<<<<< HEAD
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -107,6 +129,8 @@ fi
 =======
 >>>>>>> bdae761672ed1f91ae7ecd6c133f27a6447e7722
 
+=======
+>>>>>>> 126e038c5a548ac248ef7e18db35fbf87d2a1e2b
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
@@ -117,3 +141,23 @@ source /Users/simon/.config/broot/launcher/bash/br
 # for llvm, from bash rec, see https://apple.stackexchange.com/a/434462/308005
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/simon/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

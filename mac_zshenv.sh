@@ -1,6 +1,9 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
+alias vm='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/amd64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
+alias vmu='docker pull charlessherk/cs4120-vm'
+alias vm2='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/x86-64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
 alias src='source ~/dotfiles/mac_zshenv.sh'
 alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
@@ -22,6 +25,19 @@ alias website='ssh sca63@linux.coecis.cornell.edu'
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
 alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
+
+function cdc() {
+    cd ~/code && cd "$@"
+}
+
+function gpt() {
+    cd ~/code/fun/openai
+    if [ $# -eq 0 ]; then
+        python gpt.py
+    else
+        python gpt.py "$@"
+    fi
+}
 
 function latex2() {
     latexmk -pdf "$@" && latexmk -c
@@ -87,6 +103,9 @@ fi
 
 # Update your path to include LaTeX for TAs
 export PATH=${PATH}:/usr/texbin
+
+# include scripts in the path
+export PATH=${PATH}:/users/simon/code/scripts
 
 # Kivy settings for preferences and logging
 export KIVY_HOME="${HOME}/.kivy"
@@ -161,3 +180,4 @@ if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+export PATH="/usr/local/opt/kleopatra/bin:$PATH"

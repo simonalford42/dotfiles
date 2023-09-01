@@ -60,7 +60,6 @@
     "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
     "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
     "terminal.integrated.scrollback": 10000,
     "editor.occurrencesHighlight": false,
     "editor.selectionHighlight": false,
@@ -337,10 +336,18 @@
     "editor.autoClosingQuotes": "never",
     "workbench.editor.focusRecentEditorAfterClose": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "workbench.colorTheme": "Atom One Dark",
     "github.copilot.advanced": {
 
     },
     "workbench.editor.enablePreview": false,
     "python.terminal.activateEnvironment": false,
+    "[python]": {
+      "editor.formatOnType": true
+    },
+    "workbench.statusBar.visible": false,
+    "mypy.enabled": false,
+    "workbench.iconTheme": null,
+    "editor.semanticHighlighting.enabled": true,
+    "workbench.colorTheme": "solarized-simon",
+    "workbench.startupEditor": "none",
 }

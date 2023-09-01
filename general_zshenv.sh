@@ -1,4 +1,5 @@
 # aliases
+alias whisper='cd code/fun && python3 whisper.py'
 alias mb=mamba
 alias p=python
 alias c='clear'
@@ -19,6 +20,20 @@ alias dotgp='cd ~/dotfiles/ && gp && cd -'
 alias gpp='git push'
 # grep colored output
 alias grep='grep --color=always'
+
+function find2() {
+    find . -name "*$1*"
+}
+
+function copilot() {
+    # based off extension provided as argument, open vim file 'scratch.extension'
+    # if no extension provided, open vim file 'scratch.txt'
+    if [ -z "$1" ]; then
+        vim ~/scratch.txt
+    else
+        vim ~/scratch.$1
+    fi
+}
 
 function ga() {
     git add "$@"
@@ -55,3 +70,6 @@ function gg() {
 
 # z cd tool
 . ~/dotfiles/z/z.sh
+
+# put ~/dotfiles/scripts on path
+export PATH="$HOME/dotfiles/scripts:$PATH"

@@ -69,3 +69,6 @@ tmux at
 
 # for gpg key github? https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
+
+# add julia to path
+export PATH="/home/sca63/julia-1.9.3/bin:$PATH"

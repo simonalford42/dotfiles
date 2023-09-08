@@ -76,4 +76,5 @@ export PATH="/home/sca63/julia-1.9.3/bin:$PATH"
 # source /home/sca63/mambaforge/etc/profile.d/conda.sh
 source activate bnn_chaos_model
 
+cd ~/bnn_chaos_model
 

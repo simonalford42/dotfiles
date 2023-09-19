@@ -30,6 +30,7 @@ function gpujobet() {
     srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --mem=16G --partition=ellis-interactive "$@" --pty bash
 }
 
+alias cab='conda activate bnn_chaos_model'
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'

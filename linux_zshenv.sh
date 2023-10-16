@@ -36,12 +36,12 @@ alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
-alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=100G --partition=default_partition-interactive --pty bash'
-alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=100G --partition=gpu-interactive --pty bash'
-alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=100G --partition=ellis-interactive --pty bash'
-alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --mem=100G --partition=gpu-interactive --pty bash'
-alias gpujobe1='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=100G --nodelist=ellis-compute-01 --pty bash'
-alias gpujobe2='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=100G --nodelist=ellis-compute-02 --pty bash'
+alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
+alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
+alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'
+alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --partition=gpu-interactive --pty bash'
+alias gpujobe1='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-01 --pty bash'
+alias gpujobe2='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-02 --pty bash'
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 
@@ -64,6 +64,7 @@ alias ysqm='sq -u $USER' # sq for my jobs only
 alias ysqmo='squeue -o "%.9i %.9P %80j %.15u %.8T %.10M %.9l %.6D %R %o" -u $USER' # sqm + showing the command as well
 alias ysp='squeue -t PENDING -o "%.8Q %.10i %.3P %.9j %.6u %.2t %.16S %.10M %.10l %.5D %.12b %.2c %.4m %R" -S -t,-p,i | less -N ' # show all pending jobs
 alias ysia='sinfo -o "%15P %.5a %.10l %.10s %.4r %.8h %.10g %.6D %.11T %15G %N"'
+# see who is using ellis nodes
 alias ysqa='cat /share/ellis/g2_usage/sacct'
 
 tmux at

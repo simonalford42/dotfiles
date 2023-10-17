@@ -9,6 +9,10 @@ export PATH=$PATH:/share/apps/anaconda3/2021.05/bin
 # bin folder that doesn't require sudo access
 export PATH=$PATH:$HOME/bin
 
+function ovimr() {
+    vim out/$(ls -t out | head -n $1)
+}
+
 function trash() {
     mv "$@" ~/trash/
 }

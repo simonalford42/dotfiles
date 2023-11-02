@@ -1,4 +1,4 @@
-# at some point, can separate out cluster-specific from general linux stuff.
+#PySR model to load and replace f1 with, e.g. sr_results/hall_of_fame_9723_0.pkl at some point, can separate out cluster-specific from general linux stuff.
 
 # you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
 
@@ -39,7 +39,7 @@ alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
-alias ijob='srun --nodes=1 --time=02:00:00 --pty bash'
+alias ijob='srun --nodes=1 --time=02:00:00 --mem=50G --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'
@@ -81,6 +81,3 @@ export PATH="/home/sca63/julia-1.9.3/bin:$PATH"
 
 # source /home/sca63/mambaforge/etc/profile.d/conda.sh
 source activate bnn_chaos_model
-
-cd ~/bnn_chaos_model
-

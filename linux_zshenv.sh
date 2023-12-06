@@ -71,8 +71,6 @@ alias ysia='sinfo -o "%15P %.5a %.10l %.10s %.4r %.8h %.10g %.6D %.11T %15G %N"'
 # see who is using ellis nodes
 alias ysqa='cat /share/ellis/g2_usage/sacct'
 
-tmux at
-
 # for gpg key github? https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
 
@@ -81,3 +79,5 @@ export PATH="/home/sca63/julia-1.9.3/bin:$PATH"
 
 # source /home/sca63/mambaforge/etc/profile.d/conda.sh
 source activate bnn_chaos_model
+
+# tmux at

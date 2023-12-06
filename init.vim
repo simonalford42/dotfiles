@@ -1,5 +1,6 @@
 " neovim settings for vscode
 
+set relativenumber
 
 " use system clipboard: https://stackoverflow.com/a/8757876/4383594
 set clipboard=unnamedplus

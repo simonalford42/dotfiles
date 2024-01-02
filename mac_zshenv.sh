@@ -17,7 +17,7 @@ ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
-alias scopy2='trash ~/to_copy && scp -rC $ADDR:/home/sca63/to_copy/ ~/ && cp ~/to_copy/models.txt ~/Code/abstraction/ && cp ~/to_copy/*.pt ~/Code/abstraction/models/'
+alias scopy2='trash ~/to_copy && scp -rC $ADDR:/home/sca63/to_copy/ ~/ && cp ~/to_copy/model.ckpt ~/Code/eqdiscovery/model.ckpt'
 alias single_file='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/'
 alias single_file2='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/ && cp ~/single_file/*.pt ~/Code/abstraction/models/'
 # for cornell webpage

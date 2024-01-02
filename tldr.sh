@@ -16,3 +16,6 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 # update submodule
 # https://stackoverflow.com/questions/8191299/update-a-submodule-to-the-latest-commit/8191413#8191413
+
+# find file with name thisfile.txt
+find . -name thisfile.txt

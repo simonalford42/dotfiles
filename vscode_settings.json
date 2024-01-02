@@ -43,7 +43,6 @@
     "git.countBadge": "off",
     "problems.decorations.enabled": false,
     "workbench.editor.showIcons": false,
-    "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": true,
     "python.languageServer": "Default",
     "outline.showModules": false,
@@ -61,7 +60,7 @@
     "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
     "editor.minimap.enabled": false,
     "terminal.integrated.scrollback": 10000,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": false,
     "explorer.confirmDelete": false,
     "files.exclude": {
@@ -350,4 +349,11 @@
     "editor.semanticHighlighting.enabled": true,
     "workbench.colorTheme": "solarized-simon",
     "workbench.startupEditor": "none",
+    "extensions.experimental.affinity": {
+      "asvetliakov.vscode-neovim": 1
+    },
+    "search.showLineNumbers": true,
+    "[search-result]": {
+      "editor.lineNumbers": "on"
+    },
 }

@@ -112,7 +112,6 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
-<<<<<<< HEAD
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -141,11 +140,7 @@ unset __conda_setup
 if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
         . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
 fi
-=======
->>>>>>> bdae761672ed1f91ae7ecd6c133f27a6447e7722
 
-=======
->>>>>>> 126e038c5a548ac248ef7e18db35fbf87d2a1e2b
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 

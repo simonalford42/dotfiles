@@ -21,6 +21,11 @@ alias gpp='git push'
 # grep colored output
 alias grep='grep --color=always'
 
+
+function vimr() {
+    vim $(ls -t | head -n $1)
+}
+
 function find2() {
     find . -name "*$1*"
 }

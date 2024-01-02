@@ -1,18 +1,13 @@
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
-alias vm='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/amd64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
-alias vmu='docker pull charlessherk/cs4120-vm'
-alias vm2='docker pull charlessherk/cs4120-vm && docker run -it --platform linux/x86-64 -v /Users/simon/code/eta-compiler:/home/student/shared charlessherk/cs4120-vm'
 alias src='source ~/dotfiles/mac_zshenv.sh'
-alias mvm='cd ~/Code/abstraction'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias pdflatex='latex2'
 # brew when m1-native not available
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
-# ssh aliases
-# ssh without password: https://serverfault.com/a/241593/529924
+# SSH ALIASES
 ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
@@ -111,13 +106,46 @@ export PATH=${PATH}:/users/simon/code/scripts
 # Kivy settings for preferences and logging
 export KIVY_HOME="${HOME}/.kivy"
 
-
 # for jekyll; see https://jekyllrb.com/docs/installation/macos/ (12/27/21)
 export SDKROOT=$(xcrun --show-sdk-path)
 
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
+<<<<<<< HEAD
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/simon/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
+
+unset __conda_setup
+# <<< conda initialize <<<
+
+# had issues with conda, this fixes it: https://stackoverflow.com/a/60180578/4383594
+# conda deactivate && conda activate base
+
+if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
+        . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+fi
+=======
+>>>>>>> bdae761672ed1f91ae7ecd6c133f27a6447e7722
+
+=======
+>>>>>>> 126e038c5a548ac248ef7e18db35fbf87d2a1e2b
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 

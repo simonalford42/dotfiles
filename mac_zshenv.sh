@@ -22,6 +22,10 @@ alias website='ssh sca63@linux.coecis.cornell.edu'
 alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
 
+function scopy3() {
+    scp -rC $ADDR:/home/sca63/$1 $2
+}
+
 function cdc() {
     cd ~/code && cd "$@"
 }
@@ -172,3 +176,12 @@ fi
 # <<< conda initialize <<<
 
 export PATH="/usr/local/opt/kleopatra/bin:$PATH"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/simon/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

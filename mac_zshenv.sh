@@ -11,10 +11,6 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
-alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
-alias scopy2='scp -rC $ADDR:/home/sca63/to_copy/model.ckpt ~/Code/eqdiscovery/model.ckpt'
-alias single_file='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/'
-alias single_file2='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/ && cp ~/single_file/*.pt ~/Code/abstraction/models/'
 # for cornell webpage
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
@@ -22,12 +18,8 @@ alias website='ssh sca63@linux.coecis.cornell.edu'
 alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
 
-function scopy3() {
+function scopy() {
     scp -rC $ADDR:/home/sca63/$1 $2
-}
-
-function cdc() {
-    cd ~/code && cd "$@"
 }
 
 function gpt() {
@@ -80,6 +72,9 @@ graphitpng() {
 latte2 () {
     s=${1%tex}pdf
     t=${1%tex}aux
+    echo $1
+    echo $s
+    echo $t
     pdflatex $1
     bibtex $t
     pdflatex $1

@@ -11,10 +11,6 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 ADDR=sca63@g2-login.coecis.cornell.edu
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
-alias scopy='scp -rC $ADDR:/home/sca63/to_copy/ ~/'
-alias scopy2='trash ~/to_copy && scp -rC $ADDR:/home/sca63/to_copy/ ~/ && cp ~/to_copy/models.txt ~/Code/abstraction/ && cp ~/to_copy/*.pt ~/Code/abstraction/models/'
-alias single_file='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/'
-alias single_file2='trash ~/single_file && scp -rC $ADDR:/home/sca63/single_file/ ~/ && cp ~/single_file/*.pt ~/Code/abstraction/models/'
 # for cornell webpage
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
@@ -22,8 +18,8 @@ alias website='ssh sca63@linux.coecis.cornell.edu'
 alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
 
-function cdc() {
-    cd ~/code && cd "$@"
+function scopy() {
+    scp -rC $ADDR:/home/sca63/$1 $2
 }
 
 function gpt() {
@@ -76,6 +72,9 @@ graphitpng() {
 latte2 () {
     s=${1%tex}pdf
     t=${1%tex}aux
+    echo $1
+    echo $s
+    echo $t
     pdflatex $1
     bibtex $t
     pdflatex $1
@@ -112,7 +111,6 @@ export SDKROOT=$(xcrun --show-sdk-path)
 # for jekyll;
 export PATH=${PATH}:/Users/simon/.gem/ruby/2.6.0/bin
 
-<<<<<<< HEAD
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -141,11 +139,7 @@ unset __conda_setup
 if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
         . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
 fi
-=======
->>>>>>> bdae761672ed1f91ae7ecd6c133f27a6447e7722
 
-=======
->>>>>>> 126e038c5a548ac248ef7e18db35fbf87d2a1e2b
 # opam configuration
 [[ ! -r /Users/simon/.opam/opam-init/init.zsh ]] || source /Users/simon/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
@@ -177,3 +171,12 @@ fi
 # <<< conda initialize <<<
 
 export PATH="/usr/local/opt/kleopatra/bin:$PATH"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/simon/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

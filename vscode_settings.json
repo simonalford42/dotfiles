@@ -43,17 +43,16 @@
     "git.countBadge": "off",
     "problems.decorations.enabled": false,
     "workbench.editor.showIcons": false,
-    "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": true,
     "python.languageServer": "Default",
     "outline.showModules": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8CategorySeverity.E": "Warning",
-    "python.linting.flake8CategorySeverity.F": "Warning",
-    "python.linting.flake8Args": [
-      "--ignore=F541, W503, E226, E127, E401, E702, E231, E266, F401, E501, E741"
-    ],
-    "python.linting.mypyEnabled": true,
+    // "python.linting.flake8Enabled": true,
+    // "python.linting.flake8CategorySeverity.E": "Warning",
+    // "python.linting.flake8CategorySeverity.F": "Warning",
+    // "python.linting.flake8Args": [
+      // "--ignore=F541, W503, E226, E127, E401, E702, E231, E266, F401, E501, E741"
+    // ],
+    // "python.linting.mypyEnabled": true,
     "files.insertFinalNewline": true,
     "editor.definitionLinkOpensInPeek": true,
     "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.referenceSearch.trigger",
@@ -61,7 +60,7 @@
     "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
     "editor.minimap.enabled": false,
     "terminal.integrated.scrollback": 10000,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": false,
     "explorer.confirmDelete": false,
     "files.exclude": {
@@ -350,4 +349,17 @@
     "editor.semanticHighlighting.enabled": true,
     "workbench.colorTheme": "solarized-simon",
     "workbench.startupEditor": "none",
+    "extensions.experimental.affinity": {
+      "asvetliakov.vscode-neovim": 1
+    },
+    "search.showLineNumbers": true,
+    "[search-result]": {
+      "editor.lineNumbers": "on"
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 50,
+    "errorLens.delay": 2000,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "window.confirmSaveUntitledWorkspace": false,
 }

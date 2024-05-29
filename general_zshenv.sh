@@ -23,7 +23,12 @@ alias grep='grep --color=always'
 
 
 function vimr() {
-    vim $(ls -t | head -n $1)
+    vim $(ls -U | head -n $1)
+}
+
+function vime() {
+    vim $(sacct -X -o jobid | tail -n $1 | sed 's/[[:space:]]*$//' | sed 's/$/.out/')
+
 }
 
 function find2() {

@@ -1,6 +1,7 @@
 #PySR model to load and replace f1 with, e.g. sr_results/hall_of_fame_9723_0.pkl at some point, can separate out cluster-specific from general linux stuff.
 
 # you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
+alias pl='python -i -c"from spock_reg_model import load"'
 
 # load general settings
 . ~/dotfiles/general_zshenv.sh

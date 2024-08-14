@@ -63,9 +63,6 @@
     "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": false,
     "explorer.confirmDelete": false,
-    "files.exclude": {
-      ".*": true
-    },
     "files.autoSave": "onFocusChange",
     "latex-workshop.latex.tools": [
 

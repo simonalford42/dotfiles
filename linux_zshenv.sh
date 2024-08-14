@@ -1,4 +1,5 @@
-#PySR model to load and replace f1 with, e.g. sr_results/hall_of_fame_9723_0.pkl at some point, can separate out cluster-specific from general linux stuff.
+# to see jobs on ellis
+# sacct -X --format="JobID, node%-20, user, State%-10, JobName%-15, Elapsed, AllocTRES%-42" -a -s R -r ellis
 
 # you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
 alias pl='python -i -c"from spock_reg_model import load"'

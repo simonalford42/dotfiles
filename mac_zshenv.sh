@@ -8,16 +8,32 @@ alias pdflatex='latex2'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # SSH ALIASES
-ADDR=sca63@g2-login.coecis.cornell.edu
+ADDR=sca63@g2-login-05.coecis.cornell.edu
 SSH_ADDR=$ADDR
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
+alias host='ssh $ADDR "cat ~/.host" | pbcopy'
 # for cornell webpage
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
 # more info: https://it.coecis.cornell.edu/researchit/g2cluster/#Starting_a_Jupyter_notebook_session_Tunneling_the_notebook
 alias g2j='ssh -4 -Y -L 6006:sablab-gpu-06.ece.cornell.edu:6006 $ADDR -v -v'
 alias g2m='ssh -Y -L 7845:127.0.0.1:7845 $ADDR'
+
+# Function to add SSH config entry for Cornell nodes
+addnode() {
+    NODE_NAME=$1
+    CONFIG_FILE="$HOME/.ssh/config"
+
+    # Create config entry
+    CONFIG_ENTRY="Host $NODE_NAME
+ProxyCommand ssh sca63@g2-login-05.coecis.cornell.edu -W $NODE_NAME:%p
+User sca63"
+
+    # Add entry to config file
+    echo "$CONFIG_ENTRY" >> "$CONFIG_FILE"
+    echo "SSH config entry added for $NODE_NAME"
+}
 
 function scopy() {
     scp -rC $ADDR:/home/sca63/$1 $2
@@ -181,3 +197,4 @@ path=('/Users/simon/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+. "$HOME/.cargo/env"

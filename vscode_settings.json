@@ -365,4 +365,17 @@
     "python.createEnvironment.trigger": "off",
     "interactiveWindow.executeWithShiftEnter": true,
     "github.copilot.preferredAccount": "sca63@cornell.edu",
+    "workbench.editor.limit.enabled": true,
+
+    // for making jupyter notebooks more compact
+    // "notebook.showCellStatusBar": "hidden",
+    // "notebook.cellToolbarLocation": {
+    //   "default": "hidden"
+    // },
+    // "notebook.insertToolbarLocation": "notebookToolbar",
+    // "breadcrumbs.enabled": false,
+
+    // // testing notebook shrinking settings
+    // "notebook.globalToolbar": false,
+    // "notebook.consolidatedRunButton": true,
 }

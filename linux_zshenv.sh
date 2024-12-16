@@ -7,6 +7,9 @@ alias pl='python -i -c"from spock_reg_model import load"'
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
+# copy host name to ~/.host
+hostname -s > ~/.host
+
 export PATH=$PATH:/share/apps/anaconda3/2021.05/bin
 # bin folder that doesn't require sudo access
 export PATH=$PATH:$HOME/bin

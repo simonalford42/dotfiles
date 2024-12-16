@@ -1,4 +1,5 @@
-#PySR model to load and replace f1 with, e.g. sr_results/hall_of_fame_9723_0.pkl at some point, can separate out cluster-specific from general linux stuff.
+# to see jobs on ellis
+# sacct -X --format="JobID, node%-20, user, State%-10, JobName%-15, Elapsed, AllocTRES%-42" -a -s R -r ellis
 
 # you can cat /share/ellis/g2_usage/sacct to see a list of jobs scheduled under ellis
 alias pl='python -i -c"from spock_reg_model import load"'
@@ -18,21 +19,8 @@ function trash() {
     mv "$@" ~/trash/
 }
 
-function model_copy() {
-    cp "$@" ~/to_copy/
-
-}
-
-function model_copy2() {
-    cp ~/abstraction/out/models.txt ~/to_copy/
-}
-
 function single_file() {
     rm ~/single_file/* && cp "$@" ~/single_file/
-}
-
-function gpujobet() {
-    srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --mem=16G --partition=ellis-interactive "$@" --pty bash
 }
 
 alias cab='conda activate bnn_chaos_model'
@@ -40,7 +28,7 @@ alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_zshenv.sh'
-alias ijob='srun --nodes=1 --time=02:00:00 --mem=50G --pty bash'
+alias ijob='run --nodes=1 --time=02:00:00 --mem=50G --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsnode='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=04:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'

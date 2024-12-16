@@ -2,6 +2,16 @@
 
 set relativenumber
 
+" automatically use system clipboard
+" noremap  y "*y
+" noremap  Y "*Y
+" noremap  p "*p
+" noremap  P "*P
+" vnoremap y "*y
+" vnoremap Y "*Y
+" vnoremap p "*p
+" vnoremap P "*P
+
 " use system clipboard: https://stackoverflow.com/a/8757876/4383594
 set clipboard=unnamedplus
 

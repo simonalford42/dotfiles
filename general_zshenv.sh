@@ -11,9 +11,7 @@ alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 
 # git aliases
-alias gup="git add -u && git commit -m 'save' && git pull"
 alias gp='git pull'
-alias gpom='git push'
 alias gst='git status'
 alias gsub='git submodule update --init --recursive'
 alias dotgp='cd ~/dotfiles/ && gp && cd -'

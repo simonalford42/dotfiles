@@ -9,6 +9,7 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # SSH ALIASES
 ADDR=sca63@g2-login.coecis.cornell.edu
+SSH_ADDR=$ADDR
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 # for cornell webpage

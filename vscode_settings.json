@@ -63,9 +63,6 @@
     "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": false,
     "explorer.confirmDelete": false,
-    "files.exclude": {
-      ".*": true
-    },
     "files.autoSave": "onFocusChange",
     "latex-workshop.latex.tools": [
 
@@ -338,12 +335,10 @@
     "github.copilot.advanced": {
 
     },
-    "workbench.editor.enablePreview": false,
     "python.terminal.activateEnvironment": false,
     "[python]": {
       "editor.formatOnType": true
     },
-    "workbench.statusBar.visible": false,
     "mypy.enabled": false,
     "workbench.iconTheme": null,
     "editor.semanticHighlighting.enabled": true,
@@ -362,4 +357,12 @@
     "errorLens.delay": 2000,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "window.confirmSaveUntitledWorkspace": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+      "*": true,
+      "scminput": false
+    },
+    "python.createEnvironment.trigger": "off",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "github.copilot.preferredAccount": "sca63@cornell.edu",
 }

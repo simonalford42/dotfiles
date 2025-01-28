@@ -2,6 +2,9 @@
 # or maybe??
 #!/bin/zsh
 
+# add ssh host for vscode
+addnode node-name
+
 # https://stackoverflow.com/a/36539692/4383594
 # You can use -k option to run specific test cases
 pytest -k test_001
@@ -19,3 +22,4 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 # find file with name thisfile.txt
 find . -name thisfile.txt
+

@@ -7,7 +7,7 @@ alias pl='python -i -c"from spock_reg_model import load"'
 # load general settings
 . ~/dotfiles/general_zshenv.sh
 
-# copy host name to ~/.host
+# copy host name to ~/.host. used with addnode() command in mac_zshenv
 hostname -s > ~/.host
 
 export PATH=$PATH:/share/apps/anaconda3/2021.05/bin

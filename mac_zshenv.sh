@@ -6,13 +6,13 @@ alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias pdflatex='latex2'
 # brew when m1-native not available
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias g2host='bash ~/code/scripts/host.sh'
 
 # SSH ALIASES
 ADDR=sca63@g2-login-05.coecis.cornell.edu
 SSH_ADDR=$ADDR
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
-alias host='ssh $ADDR "cat ~/.host" | pbcopy'
 # for cornell webpage
 alias website='ssh sca63@linux.coecis.cornell.edu'
 # change sablab-gpu-06.ece.cornell.edu to whatever node name is for jupyter notebook
@@ -198,3 +198,6 @@ export PATH
 
 # <<< juliaup initialize <<<
 . "$HOME/.cargo/env"
+
+# for docker-credential-desktop
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"

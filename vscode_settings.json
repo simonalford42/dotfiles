@@ -368,14 +368,16 @@
     "workbench.editor.limit.enabled": true,
 
     // for making jupyter notebooks more compact
-    // "notebook.showCellStatusBar": "hidden",
-    // "notebook.cellToolbarLocation": {
-    //   "default": "hidden"
-    // },
-    // "notebook.insertToolbarLocation": "notebookToolbar",
-    // "breadcrumbs.enabled": false,
+    "notebook.showCellStatusBar": "hidden",
+    "notebook.cellToolbarLocation": {
+      "default": "hidden"
+    },
+    "notebook.insertToolbarLocation": "notebookToolbar",
+    "breadcrumbs.enabled": false,
 
     // // testing notebook shrinking settings
-    // "notebook.globalToolbar": false,
-    // "notebook.consolidatedRunButton": true,
+    "notebook.globalToolbar": false,
+    "notebook.consolidatedRunButton": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.openRepositoryInParentFolders": "never",
 }

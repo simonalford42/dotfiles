@@ -197,7 +197,6 @@ path=('/Users/simon/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
-. "$HOME/.cargo/env"
 
 # for docker-credential-desktop
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"

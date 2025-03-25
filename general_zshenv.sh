@@ -9,6 +9,7 @@ alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias bp='vim ~/dotfiles/*_zshenv.sh ~/dotfiles/tldr.sh*'
 alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
+alias ca='conda activate'
 
 # git aliases
 alias gp='git pull'

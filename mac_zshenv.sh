@@ -27,8 +27,9 @@ addnode() {
 
     # Create config entry
     CONFIG_ENTRY="Host $NODE_NAME
-ProxyCommand ssh sca63@g2-login-05.coecis.cornell.edu -W $NODE_NAME:%p
-User sca63"
+  ProxyCommand ssh sca63@g2-login-05.coecis.cornell.edu -W $NODE_NAME:%p
+  User sca63
+"
 
     # Add entry to config file
     echo "$CONFIG_ENTRY" >> "$CONFIG_FILE"
@@ -200,3 +201,8 @@ export PATH
 
 # for docker-credential-desktop
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=~/.npm-global/bin:$PATH

@@ -1,5 +1,6 @@
 # aliases
 alias whisper='cd code/fun && python3 whisper.py'
+alias ca='conda activate'
 alias mb=mamba
 alias p=python
 alias c='clear'

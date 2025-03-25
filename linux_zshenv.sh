@@ -1,3 +1,7 @@
+# use cuda 12.1 (for R project)
+export PATH=/usr/local/cuda-12.1/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
+
 # to see jobs on ellis
 # sacct -X --format="JobID, node%-20, user, State%-10, JobName%-15, Elapsed, AllocTRES%-42" -a -s R -r ellis
 
@@ -34,6 +38,7 @@ alias src='source ~/dotfiles/linux_zshenv.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --mem=50G --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpu='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=04:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
+alias vsgpue='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=04:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias vscpu='srun --nodes=1 --cpus-per-task=8 --time=04:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'

@@ -23,3 +23,6 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 # find file with name thisfile.txt
 find . -name thisfile.txt
 
+# restart touchbar
+sudo pkill TouchBarServer
+sudo killall ControlStrip

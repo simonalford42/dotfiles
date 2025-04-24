@@ -21,13 +21,8 @@ cp ../config/karabiner.json ~/.config/karabiner/assets/complex_modifications
 
 ###
 
-
-ln -si /Users/simon/dotfiles/mac_zshenv.sh /Users/simon/.zshenv
-
-# these should all just mirror zshenv
-ln -si /Users/simon/dotfiles/mac_zshenv.sh /Users/simon/.bashrc
-ln -si /Users/simon/dotfiles/mac_zshenv.sh /Users/simon/.zshrc
-ln -si /Users/simon/dotfiles/mac_zshenv.sh /Users/simon/.bashrc
+ln -si /Users/simon/dotfiles/mac_rc.sh /Users/simon/.bashrc
+ln -si /Users/simon/dotfiles/mac_rc.sh /Users/simon/.zshrc
 
 ln -si /Users/simon/dotfiles/tmux.conf /Users/simon/.tmux.conf
 ln -si /Users/simon/dotfiles/flake8 /Users/simon/.config/flake8

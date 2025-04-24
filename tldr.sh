@@ -2,6 +2,8 @@
 # or maybe??
 #!/bin/zsh
 
+# dont forget there is stuff in old_stuff.sh too if you need it
+
 # add ssh host for vscode
 addnode node-name
 
@@ -26,3 +28,5 @@ find . -name thisfile.txt
 # restart touchbar
 sudo pkill TouchBarServer
 sudo killall ControlStrip
+
+

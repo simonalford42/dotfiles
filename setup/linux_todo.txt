@@ -1,2 +1,0 @@
-- create /trash/ folder in home directory
-- 

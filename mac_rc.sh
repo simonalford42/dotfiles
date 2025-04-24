@@ -1,5 +1,5 @@
 # load general settings
-. ~/dotfiles/general_zshenv.sh
+. ~/dotfiles/general_rc.sh
 
 alias src='source ~/dotfiles/mac_zshenv.sh'
 alias pdflatex='latex2'

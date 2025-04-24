@@ -9,7 +9,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
 alias pl='python -i -c"from spock_reg_model import load"'
 
 # load general settings
-. ~/dotfiles/general_zshenv.sh
+. ~/dotfiles/general_rc.sh
 
 # copy host name to ~/.host. used with addnode() command in mac_zshenv
 hostname -s > ~/.host

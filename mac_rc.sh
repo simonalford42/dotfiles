@@ -1,7 +1,7 @@
 # load general settings
 . ~/dotfiles/general_rc.sh
 
-alias src='source ~/dotfiles/mac_zshenv.sh'
+alias src='source ~/dotfiles/mac_rc.sh'
 alias pdflatex='latex2'
 
 # SSH ALIASES

@@ -11,9 +11,6 @@ alias pl='python -i -c"from spock_reg_model import load"'
 # load general settings
 . ~/dotfiles/general_rc.sh
 
-# copy host name to ~/.host. used with addnode() command in mac_zshenv
-hostname -s > ~/.host
-
 export PATH=$PATH:/share/apps/anaconda3/2021.05/bin
 # bin folder that doesn't require sudo access
 export PATH=$PATH:$HOME/bin
@@ -34,7 +31,7 @@ alias cab='conda activate bnn_chaos_model'
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
-alias src='source ~/dotfiles/linux_zshenv.sh'
+alias src='source ~/dotfiles/linux_rc.sh'
 alias ijob='srun --nodes=1 --time=02:00:00 --mem=50G --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpu='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=04:00:00 --mem=50G --partition=default_partition-interactive --pty bash'

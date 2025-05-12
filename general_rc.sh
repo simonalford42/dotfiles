@@ -11,7 +11,7 @@ alias bp='vim ~/dotfiles/*_rc.sh ~/dotfiles/tldr.sh*'
 alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 alias ca='conda activate'
-alias condastartup='vim $CONDA_PREFIX/etc/conda/activate.d/my_script.sh'
+alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
 
 # git aliases
 alias gp='git pull'

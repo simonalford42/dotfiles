@@ -28,7 +28,6 @@
 
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "outline.showConstants": false,
     "outline.showBooleans": false,
     "outline.showArrays": false,
     "outline.showFields": false,

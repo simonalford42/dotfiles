@@ -2,6 +2,9 @@
 # or maybe??
 #!/bin/zsh
 
+# conda activate location
+# $CONDA_PREFIX/etc/conda/activate.d/my_script.sh
+
 # dont forget there is stuff in old_stuff.sh too if you need it
 
 # add ssh host for vscode

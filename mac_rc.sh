@@ -47,3 +47,9 @@ if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/simon/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/simon/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/simon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/simon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

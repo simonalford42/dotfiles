@@ -379,4 +379,5 @@
     "notebook.consolidatedRunButton": true,
     "explorer.confirmDragAndDrop": false,
     "git.openRepositoryInParentFolders": "never",
+    "julia.enableCrashReporter": true,
 }

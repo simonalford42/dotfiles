@@ -10,7 +10,6 @@ alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias bp='vim ~/dotfiles/*_rc.sh ~/dotfiles/tldr.sh*'
 alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
-alias ca='conda activate'
 alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
 
 # git aliases
@@ -22,6 +21,9 @@ alias gpp='git push'
 # grep colored output
 alias grep='grep --color=always'
 
+
+# use vim bindings in command line
+set -o vi
 
 function vimr() {
     vim $(ls -U | head -n $1)

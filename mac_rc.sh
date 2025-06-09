@@ -10,6 +10,11 @@ SSH_ADDR=$ADDR
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 
+function touchbarreset() {
+    sudo pkill TouchBarServer
+    sudo killall ControlStrip
+}
+
 function scopy() {
     scp -rC $ADDR:/home/sca63/$1 $2
 }

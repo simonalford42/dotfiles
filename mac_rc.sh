@@ -9,6 +9,7 @@ ADDR=sca63@g2-login-05.coecis.cornell.edu
 SSH_ADDR=$ADDR
 alias g2='ssh $ADDR'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
+alias tbr=touchbarreset
 
 function touchbarreset() {
     sudo pkill TouchBarServer

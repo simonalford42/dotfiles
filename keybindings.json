@@ -1,0 +1,94 @@
+// Place your key bindings in this file to override the defaultsauto[]
+// more info: https://code.visualstudio.com/docs/getstarted/keybindings
+[
+
+{    "key": "cmd+`",
+    "command": "workbench.action.focusNextWindow"},
+// this works in the Notes and Mail apps too
+{ "key": "cmd+ctrl+s",                 "command": "workbench.action.toggleSidebarVisibility" },
+
+{ "key": "ctrl+s", "command":  "workbench.action.files.saveAll" },
+{ "key": "cmd+s",  "command": "workbench.action.files.save" },
+
+{ "key": "escape", "command": "problems.action.focusProblemsFromFilter", "when": "problemsFilterFocus" },
+
+{ "key": "ctrl+]", "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+{ "key": "ctrl+J", "command": "workbench.action.previousEditor", },
+{ "key": "ctrl+K", "command": "workbench.action.nextEditor", },
+
+// latex shortcuts
+{"key": "ctrl+; f", "command": "latex-workshop.actions", },
+{"key": "ctrl+; v", "command": "latex-workshop.view", },
+{"key": "ctrl+; b", "command": "latex-workshop.build", },
+
+// window stuff. repeat twice so that ctrl for second is optional
+{"key": "ctrl+w p", "command": "workbench.action.toggleMaximizedPanel", },
+{"key": "ctrl+w ctrl+p", "command": "workbench.action.toggleMaximizedPanel", },
+
+{ "key": "ctrl+w ctrl+f", "command": "workbench.explorer.fileView.focus"},
+{ "key": "ctrl+w f", "command": "workbench.explorer.fileView.focus" },
+ // need twice in case outline not in view
+{ "key": "ctrl+w ctrl+r", "command": "extension.multiCommand.execute", "args": { "sequence": [ "outline.focus", "outline.focus", ] } },
+{ "key": "ctrl+w r", "command": "extension.multiCommand.execute", "args": { "sequence": [ "outline.focus", "outline.focus", ] } },
+
+{ "key": "ctrl+w a", "command": "workbench.action.toggleActivityBarVisibility" },
+{ "key": "ctrl+w a", "command": "workbench.action.toggleActivityBarVisibility" },
+
+{ "key": "ctrl+w g", "command": "workbench.action.focusActiveEditorGroup", "when": "!editor.active" },
+{ "key": "ctrl+w ctrl+g", "command": "workbench.action.focusActiveEditorGroup", "when": "!editor.active" },
+
+{ "key": "ctrl+w ctrl+;", "command": "outline.toggleVisibility" },
+{ "key": "ctrl+w ;", "command": "outline.toggleVisibility" },
+
+{ "key": "ctrl+w ctrl+h", "command": "workbench.action.focusLeftGroup" },
+{ "key": "ctrl+w h", "command": "workbench.action.focusLeftGroup" },
+
+{ "key": "ctrl+w ctrl+l", "command": "workbench.action.focusRightGroup" },
+{ "key": "ctrl+w l", "command": "workbench.action.focusRightGroup" },
+
+{ "key": "ctrl+w o", "command": "workbench.action.closeEditorsInOtherGroups" },
+{ "key": "ctrl+w ctrl+o", "command": "workbench.action.closeEditorsInOtherGroups" },
+
+{ "key": "cmd+k k", "command": "workbench.action.openGlobalKeybindingsFile" },
+{ "key": "cmd+e", "command": "extension.multiCommand.execute", "args": { "sequence": [ "workbench.action.closeActiveEditor", "workbench.action.previousEditor", ] } },
+
+// cancels
+{ "key": "cmd+k cmd+right", "command": "-workbench.action.focusRightGroup" },
+{ "key": "cmd+k cmd+left", "command": "-workbench.action.focusLeftGroup" },
+{
+    "key": "alt+cmd+t",
+    "command": "-workbench.action.closeOtherEditors"
+},
+{
+    "key": "alt+]",
+    "command": "-editor.action.inlineSuggest.showNext",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+},
+{
+    "key": "alt+[",
+    "command": "-editor.action.inlineSuggest.showPrevious",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+},
+{
+    "key": "alt+\\",
+    "command": "-editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+},
+{
+    "key": "escape",
+    "command": "-editor.action.inlineSuggest.hide",
+    "when": "inlineSuggestionVisible"
+},
+{
+    "key": "ctrl+w d",
+    "command": "outline.expand"
+},
+{
+    "key": "ctrl+w e",
+    "command": "outline.collapse"
+},
+{
+    "key": "ctrl+w a",
+    "command": "workbench.action.toggleActivityBarVisibility"
+},
+]

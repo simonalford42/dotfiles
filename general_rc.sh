@@ -67,3 +67,4 @@ function gg() {
 
 # put ~/dotfiles/scripts on path
 export PATH="$HOME/dotfiles/scripts:$PATH"
+

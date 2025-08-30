@@ -42,6 +42,7 @@ alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --m
 alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --partition=gpu-interactive --pty bash'
 alias gpujobe1='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-01 --pty bash'
 alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-02 --pty bash'
+alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 

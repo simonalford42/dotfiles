@@ -37,6 +37,7 @@ alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --me
 alias vsgpu='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpue='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias vscpu='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
+alias vscpue='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --partition=gpu-interactive --pty bash'

@@ -27,6 +27,20 @@ function single_file() {
     rm ~/single_file/* && cp "$@" ~/single_file/
 }
 
+slurm_last_active_id() {
+  squeue -u "$USER" -h -o "%i|%V" --sort=-V | head -n1 | cut -d'|' -f1
+}
+
+function tlast() {
+  local id f
+  id=$(slurm_last_active_id) || { print -r -- "No recent jobs found."; return 1; }
+  f="out/${id}.out"
+  if [[ ! -e "$f" ]]; then
+    print -r -- "Log $f not found (yet). Waiting and following..."
+  fi
+  tail -F -- "$f"
+}
+
 alias cab='conda activate bnn_chaos_model'
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'

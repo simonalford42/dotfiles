@@ -87,7 +87,7 @@ alias ysqa='cat /share/ellis/g2_usage/sacct'
 export GPG_TTY=$(tty)
 
 # add julia to path
-export PATH="/home/sca63/julia-1.9.3/bin:$PATH"
+export PATH="/home/sca63/julia-1.10.10/bin:$PATH"
 
 source /home/sca63/mambaforge/etc/profile.d/conda.sh
 conda activate ttsr

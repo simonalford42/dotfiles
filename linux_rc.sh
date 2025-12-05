@@ -90,4 +90,4 @@ export GPG_TTY=$(tty)
 export PATH="/home/sca63/julia-1.10.10/bin:$PATH"
 
 source /home/sca63/mambaforge/etc/profile.d/conda.sh
-conda activate ttsr
+conda activate meta_sr

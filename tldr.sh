@@ -7,8 +7,8 @@
 
 # dont forget there is stuff in old_stuff.sh too if you need it
 
-# add ssh host for vscode
-addnode node-name
+# scripts that run upon activating conda env
+cd $CONDA_PREFIX/etc/conda/activate.d/
 
 # https://stackoverflow.com/a/36539692/4383594
 # You can use -k option to run specific test cases

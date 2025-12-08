@@ -27,6 +27,20 @@ function single_file() {
     rm ~/single_file/* && cp "$@" ~/single_file/
 }
 
+slurm_last_active_id() {
+  squeue -u "$USER" -h -o "%i|%V" --sort=-V | head -n1 | cut -d'|' -f1
+}
+
+function tlast() {
+  local id f
+  id=$(slurm_last_active_id) || { print -r -- "No recent jobs found."; return 1; }
+  f="out/${id}.out"
+  if [[ ! -e "$f" ]]; then
+    print -r -- "Log $f not found (yet). Waiting and following..."
+  fi
+  tail -F -- "$f"
+}
+
 alias cab='conda activate bnn_chaos_model'
 alias vimout='vim $(cd out && ls -Art | tail -n 10)$'
 alias ma='mamba activate'
@@ -37,11 +51,13 @@ alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --me
 alias vsgpu='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpue='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias vscpu='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
+alias vscpue='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --partition=gpu-interactive --pty bash'
-alias gpujobe1='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-01 --pty bash'
-alias gpujobe2='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-02 --pty bash'
+alias gpujobe1='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-01 --pty bash'
+alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --nodelist=ellis-compute-02 --pty bash'
+alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 
@@ -71,9 +87,7 @@ alias ysqa='cat /share/ellis/g2_usage/sacct'
 export GPG_TTY=$(tty)
 
 # add julia to path
-export PATH="/home/sca63/julia-1.9.3/bin:$PATH"
+export PATH="/home/sca63/julia-1.10.10/bin:$PATH"
 
-# source /home/sca63/mambaforge/etc/profile.d/conda.sh
-source activate bnn_chaos_model
-
-# tmux at
+source /home/sca63/mambaforge/etc/profile.d/conda.sh
+conda activate meta_sr

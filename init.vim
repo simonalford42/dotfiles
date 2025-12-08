@@ -88,6 +88,8 @@ noremap <silent> <SPACE>6 :set hlsearch!<CR>
 
 " go to definition
 noremap gd <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+" noremap gr <Cmd>call VSCodeNotify('editor.action.referenceSearch.trigger')<CR>
+nnoremap gr <Cmd>lua require('vscode').action('editor.action.referenceSearch.trigger')<CR>
 
 " source vimrc
 noremap gm :so ~/dotfiles/init.vim<CR>:echo "sourced ~/dotfiles/init.vim"<CR>

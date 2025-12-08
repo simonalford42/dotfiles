@@ -9,8 +9,8 @@ defaults write -g NSAutomaticDashSubstitutionEnabled 0
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# fast trackpad speed. not sure if it does anything higher than a certain point, but try anyway
-defaults write -g com.apple.trackpad.scaling 50
+# fast trackpad speed.
+defaults write -g com.apple.trackpad.scaling 5
 
 chflags nohidden ~/Library
 # Disable the “Are you sure you want to open this application?” dialog

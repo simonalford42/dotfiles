@@ -29,4 +29,5 @@ ln -si /Users/simon/dotfiles/tmux.conf /Users/simon/.tmux.conf
 ln -si /Users/simon/dotfiles/flake8 /Users/simon/.config/flake8
 ln -si /Users/simon/dotfiles/global_gitignore /Users/simon/.gitignore
 ln -si /Users/simon/dotfiles/vscode_settings.json /Users/simon/Library/Application\ Support/Code/User/settings.json
+ln -si /Users/simon/dotfiles/keybindings.json /Users/simon/Library/Application\ Support/Code/User/keybindings.json
 ln -si /Users/simon/dotfiles/vimrc /Users/simon/.vim/vimrc

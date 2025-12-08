@@ -5,9 +5,10 @@ alias src='source ~/dotfiles/mac_rc.sh'
 alias pdflatex='latex2'
 
 # SSH ALIASES
-ADDR=sca63@g2-login-05.coecis.cornell.edu
+ADDR=sca63@unicorn-login-02.coecis.cornell.edu
 SSH_ADDR=$ADDR
-alias g2='ssh $ADDR'
+alias g2='ssh sca63@g2-login-05.coecis.cornell.edu'
+alias uc='ssh sca63@unicorn-login-02.coecis.cornell.edu'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias tbr=touchbarreset
 
@@ -35,27 +36,36 @@ fi
 # for docker-credential-desktop
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/simon/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/simon/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# Only set PATH eagerly (fast)
+export PATH="/Users/simon/mambaforge/bin:$PATH"
 
-if [ -f "/Users/simon/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/simon/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/Users/simon/mambaforge/etc/profile.d/conda.sh" ]; then
+  conda() {
+    unset -f conda
+    . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
+    conda "$@"
+  }
+
+  mamba() {
+    unset -f mamba
+    . "/Users/simon/mambaforge/etc/profile.d/conda.sh"
+    mamba "$@"
+  }
 fi
-# <<< conda initialize <<<
 
 # The next line updates PATH for the Google Cloud SDK.
+
 if [ -f '/Users/simon/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/simon/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/simon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/simon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/simon/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

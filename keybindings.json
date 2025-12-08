@@ -27,9 +27,6 @@
 
 { "key": "ctrl+w ctrl+f", "command": "workbench.explorer.fileView.focus"},
 { "key": "ctrl+w f", "command": "workbench.explorer.fileView.focus" },
- // need twice in case outline not in view
-{ "key": "ctrl+w ctrl+r", "command": "extension.multiCommand.execute", "args": { "sequence": [ "outline.focus", "outline.focus", ] } },
-{ "key": "ctrl+w r", "command": "extension.multiCommand.execute", "args": { "sequence": [ "outline.focus", "outline.focus", ] } },
 
 { "key": "ctrl+w a", "command": "workbench.action.toggleActivityBarVisibility" },
 { "key": "ctrl+w a", "command": "workbench.action.toggleActivityBarVisibility" },
@@ -37,8 +34,8 @@
 { "key": "ctrl+w g", "command": "workbench.action.focusActiveEditorGroup", "when": "!editor.active" },
 { "key": "ctrl+w ctrl+g", "command": "workbench.action.focusActiveEditorGroup", "when": "!editor.active" },
 
-{ "key": "ctrl+w ctrl+;", "command": "outline.toggleVisibility" },
-{ "key": "ctrl+w ;", "command": "outline.toggleVisibility" },
+{ "key": "ctrl+w ctrl+r", "command": "workbench.action.toggleAuxiliaryBar" },
+{ "key": "ctrl+w r", "command": "workbench.action.toggleAuxiliaryBar" },
 
 { "key": "ctrl+w ctrl+h", "command": "workbench.action.focusLeftGroup" },
 { "key": "ctrl+w h", "command": "workbench.action.focusLeftGroup" },
@@ -90,5 +87,19 @@
 {
     "key": "ctrl+w a",
     "command": "workbench.action.toggleActivityBarVisibility"
+},
+{
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+},
+{
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+},
+{
+    "key": "ctrl+w c",
+    "command": "workbench.files.action.collapseExplorerFolders"
 },
 ]

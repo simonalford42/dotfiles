@@ -102,4 +102,8 @@
     "key": "ctrl+w c",
     "command": "workbench.files.action.collapseExplorerFolders"
 },
+{
+    "key": "ctrl+w ;",
+    "command": "outline.focus"
+},
 ]

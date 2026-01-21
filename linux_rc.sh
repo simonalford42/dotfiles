@@ -60,7 +60,7 @@ alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --
 alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
 # try to get ellis-compute-01, if it takes more than 5 seconds just get any node on ellis
-vscpue () {
+vscpue() {
   srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
        --partition=ellis-interactive \
        --nodelist=ellis-compute-01 --immediate=5 \
@@ -70,6 +70,7 @@ vscpue () {
        --partition=ellis-interactive \
        --pty bash
 }
+alias v=vscpue
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 
@@ -101,5 +102,10 @@ export GPG_TTY=$(tty)
 # add julia to path
 export PATH="/home/sca63/julia-1.10.10/bin:$PATH"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 source /home/sca63/mambaforge/etc/profile.d/conda.sh
 conda activate meta_sr
+

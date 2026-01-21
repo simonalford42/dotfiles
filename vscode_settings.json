@@ -385,4 +385,5 @@
     "workbench.activityBar.location": "hidden",
     "explorer.sortOrder": "modified",
     "claudeCode.preferredLocation": "panel",
+    "terminal.integrated.enableVisualBell": true,
 }

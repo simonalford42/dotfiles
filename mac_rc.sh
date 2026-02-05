@@ -10,6 +10,7 @@ SSH_ADDR=$ADDR
 alias g2='ssh sca63@g2-login-05.coecis.cornell.edu'
 alias uc='ssh sca63@unicorn-login-02.coecis.cornell.edu'
 alias uc4='ssh sca63@unicorn-login-04.coecis.cornell.edu'
+alias g2='ssh sca63@g2-login-04.coecis.cornell.edu'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias tbr=touchbarreset
 

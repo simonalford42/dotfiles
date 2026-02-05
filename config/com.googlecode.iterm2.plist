@@ -57582,7 +57582,7 @@ The script should do this: \(ai.prompt)</string>
 				<real>1</real>
 			</dict>
 			<key>BM Growl</key>
-			<false/>
+			<true/>
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>

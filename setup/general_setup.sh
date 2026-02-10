@@ -31,3 +31,7 @@ ln -si /Users/simon/dotfiles/global_gitignore /Users/simon/.gitignore
 ln -si /Users/simon/dotfiles/vscode_settings.json /Users/simon/Library/Application\ Support/Code/User/settings.json
 ln -si /Users/simon/dotfiles/keybindings.json /Users/simon/Library/Application\ Support/Code/User/keybindings.json
 ln -si /Users/simon/dotfiles/vimrc /Users/simon/.vim/vimrc
+
+# Claude Code settings
+mkdir -p "$HOME/.claude"
+ln -si "$HOME/dotfiles/claude_settings.json" "$HOME/.claude/settings.json"

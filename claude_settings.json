@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "STDIN=$(cat); TRANSCRIPT=$(echo \"$STDIN\" | jq -r '.transcript_path'); FULL=$(tac \"$TRANSCRIPT\" | jq -r 'select(.type==\"assistant\") | .message.content[]? | select(.type==\"text\") | .text' 2>/dev/null | head -1); MSG=$(printf '%.50s' \"$FULL\"); if [ \"$MSG\" != \"$FULL\" ]; then MSG=\"$MSG...\"; fi; printf '\\e]9;Claude: %s\\e\\\\' \"$MSG\" > /dev/tty"
+          }
+        ]
+      }
+    ]
+  }
+}

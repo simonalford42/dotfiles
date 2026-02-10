@@ -35,3 +35,7 @@ ln -si /Users/simon/dotfiles/vimrc /Users/simon/.vim/vimrc
 # Claude Code settings
 mkdir -p "$HOME/.claude"
 ln -si "$HOME/dotfiles/claude_settings.json" "$HOME/.claude/settings.json"
+
+# Codex settings
+mkdir -p "$HOME/.codex"
+ln -si "$HOME/dotfiles/codex_config.toml" "$HOME/.codex/config.toml"

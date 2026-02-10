@@ -14,6 +14,18 @@ alias g2='ssh sca63@g2-login-04.coecis.cornell.edu'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
 alias tbr=touchbarreset
 
+function vpn() {
+    local state
+    state="$(/opt/cisco/secureclient/bin/vpn state 2>&1)" 
+    if echo "$state" | command grep -q "state: Connected"; then
+        echo "$state"
+        echo "Already connected."
+        echo "Disconnect with: /opt/cisco/secureclient/bin/vpn disconnect"
+    else
+        /Users/simon/code/scripts/cornell-vpn-keychain.exp
+    fi
+}
+
 function touchbarreset() {
     sudo pkill TouchBarServer
     sudo killall ControlStrip

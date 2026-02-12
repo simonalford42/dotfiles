@@ -43,6 +43,30 @@ trust_level = "trusted"
 [projects."/Users/simon/code/aesthetic-site"]
 trust_level = "trusted"
 
+[projects."/home/sca63/dotfiles"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr_test"]
+trust_level = "trusted"
+
+[projects."/home/sca63"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr_teset"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr_2_12"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr/meta_sr_v8"]
+trust_level = "trusted"
+
+[projects."/home/sca63/meta_sr/meta_sr_v9"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 gpt-5-codex = "gpt-5.2-codex"
 

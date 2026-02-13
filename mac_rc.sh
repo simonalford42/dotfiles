@@ -9,6 +9,7 @@ ADDR=sca63@unicorn-login-02.coecis.cornell.edu
 SSH_ADDR=$ADDR
 alias g2='ssh sca63@g2-login-05.coecis.cornell.edu'
 alias uc='ssh sca63@unicorn-login-02.coecis.cornell.edu'
+alias e='ssh -t sca63@unicorn-login-02.coecis.cornell.edu '\''bash -lic "v"'\'''
 alias uc4='ssh sca63@unicorn-login-04.coecis.cornell.edu'
 alias g2='ssh sca63@g2-login-04.coecis.cornell.edu'
 alias clip='ssh $ADDR "cat ~/.vim/clip.txt" | pbcopy'
@@ -26,6 +27,22 @@ function vpn() {
     fi
 }
 
+function vpne() {
+    vpn && e
+}
+
+notify() {
+  local cmd="$*"
+  "$@"
+  local rc=$?
+
+  if [ -z "$cmd" ]; then
+    cmd="(empty command)"
+  fi
+
+  printf '\e]9;command %s finished\e\\' "$cmd" > /dev/tty 2>/dev/null || true
+  return $rc
+}
 function touchbarreset() {
     sudo pkill TouchBarServer
     sudo killall ControlStrip

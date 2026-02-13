@@ -57797,7 +57797,7 @@ The script should do this: \(ai.prompt)</string>
 			<key>Send Session Ended Alert</key>
 			<false/>
 			<key>Send Terminal Generated Alerts</key>
-			<false/>
+			<true/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>

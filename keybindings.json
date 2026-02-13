@@ -13,6 +13,8 @@
 { "key": "escape", "command": "problems.action.focusProblemsFromFilter", "when": "problemsFilterFocus" },
 
 { "key": "ctrl+]", "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+// focus terminal tabs view: shift + command + \
+// focus terminal: command + down arrow
 { "key": "ctrl+J", "command": "workbench.action.previousEditor", },
 { "key": "ctrl+K", "command": "workbench.action.nextEditor", },
 

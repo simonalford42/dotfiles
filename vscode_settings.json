@@ -350,7 +350,6 @@
     "[search-result]": {
       "editor.lineNumbers": "on"
     },
-    "workbench.editor.tabSizing": "shrink",
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 50,
     "errorLens.delay": 2000,
@@ -386,4 +385,6 @@
     "explorer.sortOrder": "modified",
     "claudeCode.preferredLocation": "panel",
     "terminal.integrated.enableVisualBell": true,
+    "workbench.editor.tabSizingFixedMinWidth": 80,
+    "window.density.editorTabHeight": "compact",
 }

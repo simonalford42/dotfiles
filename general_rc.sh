@@ -27,6 +27,19 @@ alias grep='grep --color=always'
 # use vim bindings in command line
 set -o vi
 
+notify() {
+  local cmd="$*"
+  "$@"
+  local rc=$?
+
+  if [ -z "$cmd" ]; then
+    cmd="(empty command)"
+  fi
+
+  printf '\e]9;command %s finished\e\\' "$cmd" > /dev/tty 2>/dev/null || true
+  return $rc
+}
+
 function vimr() {
     vim $(ls -U | head -n $1)
 }

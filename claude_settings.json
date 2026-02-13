@@ -11,6 +11,5 @@
       }
     ]
   },
-  "skipDangerousModePermissionPrompt": true,
-  "fastMode": true
+  "skipDangerousModePermissionPrompt": true
 }

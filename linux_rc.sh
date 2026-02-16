@@ -35,6 +35,19 @@ slurm_last_active_id() {
   squeue -u "$USER" -h -o "%i|%V" --sort=-V | head -n1 | cut -d'|' -f1
 }
 
+sb() {
+  local out
+  out=$(command sbatch "$@")
+  echo "$out"
+
+  # extract job id and copy
+  local jobid
+  jobid=$(echo "$out" | grep -oE '[0-9]+$')
+  if [[ -n "$jobid" ]]; then
+    echo -n "$jobid" | pbcopy
+  fi
+}
+
 function tlast() {
   local id f
   id=$(slurm_last_active_id) || { print -r -- "No recent jobs found."; return 1; }

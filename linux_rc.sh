@@ -3,8 +3,8 @@ export PATH=/usr/local/cuda-12.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
 
 # automatically put slurm outfiles in ~/out/
-export SBATCH_OUTPUT="$HOME/out/%x_%j.out"
-export SBATCH_ERROR="$HOME/out/%x_%j.out"
+export SBATCH_OUTPUT="$HOME/out/%A_%a.out"
+export SBATCH_ERROR="$HOME/out/%A_%a.out"
 
 # to see jobs on ellis
 # sacct -X --format="JobID, node%-20, user, State%-10, JobName%-15, Elapsed, AllocTRES%-42" -a -s R -r ellis

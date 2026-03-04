@@ -44,6 +44,7 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/simon/blog"]
+trust_level = "trusted"
 
 [projects."/home/sca63/dotfiles"]
 trust_level = "trusted"
@@ -69,9 +70,18 @@ trust_level = "trusted"
 [projects."/home/sca63/meta_sr/meta_sr_v9"]
 trust_level = "trusted"
 
+[projects."/Users/simon/code/meta_sr"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/william-palmer"]
+trust_level = "trusted"
+
+[projects."/Users/simon"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 gpt-5-codex = "gpt-5.2-codex"
 
 [tui]
-notifications = ["agent-turn-complete"]
+notifications = ["approval-requested"]
 notification_method = "osc9"

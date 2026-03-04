@@ -31,6 +31,20 @@ function vpne() {
     vpn && e
 }
 
+
+function ramin() {
+  local day
+  local begin
+  local remote_cmd
+  day="$(date +%F)"
+  begin="${day}T21:45:00"
+  remote_cmd="cd fun && sbatch --begin=$begin run.sh email_send.py --to ro262@cornell.edu --day $day --hour 22 --minute 00 --cluster"
+
+  vpn || return $?
+  echo "$remote_cmd"
+  ssh "$ADDR" "bash -lic '$remote_cmd'"
+}
+
 notify() {
   local cmd="$*"
   "$@"

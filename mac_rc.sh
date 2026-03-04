@@ -57,6 +57,7 @@ notify() {
   printf '\e]9;command %s finished\e\\' "$cmd" > /dev/tty 2>/dev/null || true
   return $rc
 }
+
 function touchbarreset() {
     sudo pkill TouchBarServer
     sudo killall ControlStrip

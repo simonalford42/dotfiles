@@ -21,10 +21,6 @@
       }
     ]
   },
-<<<<<<< HEAD
   "skipDangerousModePermissionPrompt": true,
   "model": "opus"
-=======
-  "skipDangerousModePermissionPrompt": true
->>>>>>> 3adb04e501df0a546a224cb55f66e2d643a1e006
 }

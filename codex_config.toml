@@ -70,20 +70,16 @@ trust_level = "trusted"
 [projects."/home/sca63/meta_sr/meta_sr_v9"]
 trust_level = "trusted"
 
-<<<<<<< HEAD
 [projects."/Users/simon/code/meta_sr"]
 trust_level = "trusted"
 
 [projects."/Users/simon/code/william-palmer"]
 trust_level = "trusted"
 
-[projects."/Users/simon"]
-=======
 [projects."/home/sca63/meta_sr/meta_sr_v10"]
 trust_level = "trusted"
 
 [projects."/home/sca63/meta_sr_v13"]
->>>>>>> 3adb04e501df0a546a224cb55f66e2d643a1e006
 trust_level = "trusted"
 
 [notice.model_migrations]

@@ -22,5 +22,7 @@
       }
     ]
   },
-  "skipDangerousModePermissionPrompt": true
+  "fastMode": true,
+  "skipDangerousModePermissionPrompt": true,
+  "model": "opus"
 }

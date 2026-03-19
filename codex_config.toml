@@ -1,6 +1,6 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 model_reasoning_effort = "xhigh"
 personality = "pragmatic"
 
@@ -88,8 +88,33 @@ trust_level = "trusted"
 [projects."/home/sca63/fun"]
 trust_level = "trusted"
 
+[projects."/Users/simon/Documents/Latex/planets_revision"]
+trust_level = "trusted"
+
+[projects."/Users/simon/Documents/inkscape"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/cactus_light"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/llm-analysis"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/svg"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/pdf-modify"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/vscode-tabs"]
+trust_level = "trusted"
+
+[projects."/Users/simon/Documents/Latex/planet_paper"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 gpt-5-codex = "gpt-5.2-codex"
+"gpt-5.3-codex" = "gpt-5.4"
 
 [tui]
 notifications = ["approval-requested"]

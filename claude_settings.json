@@ -1,5 +1,4 @@
 {
-  "model": "opus",
   "hooks": {
     "PermissionRequest": [
       {
@@ -24,5 +23,5 @@
   },
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
-  "model": "opus"
+  "effortLevel": "medium"
 }

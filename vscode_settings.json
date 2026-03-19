@@ -387,4 +387,7 @@
     "terminal.integrated.enableVisualBell": true,
     "workbench.editor.tabSizingFixedMinWidth": 80,
     "window.density.editorTabHeight": "compact",
+    "workbench.editor.customLabels.patterns": {
+      "/Users/simon/Documents/Latex/planet_paper/main.tex": "a main.tex"
+    },
 }

@@ -38,7 +38,7 @@ function ramin() {
   local remote_cmd
   day="$(date +%F)"
   begin="${day}T21:55:00"
-  remote_cmd="cd fun && sbatch --begin=$begin run.sh email_send.py --to ro262@cornell.edu --day $day --hour 22 --minute 00 --cluster"
+  remote_cmd="cd fun && sbatch --begin=$begin run.sh email_send.py --to ro252@cornell.edu --day $day --hour 22 --minute 00 --cluster"
 
   vpn || return $?
   echo "$remote_cmd"

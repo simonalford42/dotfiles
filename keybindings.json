@@ -108,4 +108,16 @@
     "key": "ctrl+w ;",
     "command": "outline.focus"
 },
+
+// switch to tab by index (ctrl+; then home row key)
+{ "key": "ctrl+; a", "command": "workbench.action.openEditorAtIndex1" },
+{ "key": "ctrl+; s", "command": "workbench.action.openEditorAtIndex2" },
+{ "key": "ctrl+; d", "command": "workbench.action.openEditorAtIndex3" },
+{ "key": "ctrl+; f", "command": "workbench.action.openEditorAtIndex4" },
+{ "key": "ctrl+; g", "command": "workbench.action.openEditorAtIndex5" },
+{ "key": "ctrl+; h", "command": "workbench.action.openEditorAtIndex6" },
+{ "key": "ctrl+; j", "command": "workbench.action.openEditorAtIndex7" },
+{ "key": "ctrl+; k", "command": "workbench.action.openEditorAtIndex8" },
+{ "key": "ctrl+; l", "command": "workbench.action.openEditorAtIndex9" },
+{ "key": "ctrl+; ;", "command": "workbench.action.openEditorAtIndex10" },
 ]

@@ -26,6 +26,7 @@ alias grep='grep --color=always'
 # use vim bindings in command line
 set -o vi
 
+
 bp() {
   local files=(
     ~/dotfiles/general_rc.sh
@@ -35,9 +36,14 @@ bp() {
   )
 
   if [[ -n "$CONDA_PREFIX" && -d "$CONDA_PREFIX/etc/conda/activate.d" ]]; then
-    local -a conda_files
-    conda_files=("$CONDA_PREFIX"/etc/conda/activate.d/*.sh(N))
-    files+=("${conda_files[@]}")
+    local conda_dir="$CONDA_PREFIX/etc/conda/activate.d"
+    local f
+
+    shopt -s nullglob
+    for f in "$conda_dir"/*.sh; do
+      files+=("$f")
+    done
+    shopt -u nullglob
   fi
 
   vim "${files[@]}"

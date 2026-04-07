@@ -7,7 +7,6 @@ alias c='clear'
 alias pt='python -i -c"import torch as t; import torch; import torch.nn.functional as F; import torch.nn as nn; import numpy as np"'
 alias ls='ls -Gp' # G colorizes output, p puts a / after directories
 alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
-alias bp='vim ~/dotfiles/general_rc.sh ~/dotfiles/linux_rc.sh ~/dotfiles/mac_rc.sh ~/dotfiles/tldr.sh $CONDA_PREFIX/etc/conda/activate.d/*.sh'
 alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
@@ -26,6 +25,23 @@ alias grep='grep --color=always'
 
 # use vim bindings in command line
 set -o vi
+
+bp() {
+  local files=(
+    ~/dotfiles/general_rc.sh
+    ~/dotfiles/linux_rc.sh
+    ~/dotfiles/mac_rc.sh
+    ~/dotfiles/tldr.sh
+  )
+
+  if [[ -n "$CONDA_PREFIX" && -d "$CONDA_PREFIX/etc/conda/activate.d" ]]; then
+    local -a conda_files
+    conda_files=("$CONDA_PREFIX"/etc/conda/activate.d/*.sh(N))
+    files+=("${conda_files[@]}")
+  fi
+
+  vim "${files[@]}"
+}
 
 notify() {
   local cmd="$*"

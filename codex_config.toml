@@ -4,7 +4,6 @@ model = "gpt-5.4"
 model_reasoning_effort = "xhigh"
 personality = "pragmatic"
 service_tier = "fast"
-approvals_reviewer = "user"
 
 [projects."/Users/simon/code/SymbolicRegression.jl"]
 trust_level = "trusted"
@@ -118,6 +117,8 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/simon/code/projects"]
+
+[projects."/home/sca63/bnn_chaos_model"]
 trust_level = "trusted"
 
 [notice.model_migrations]

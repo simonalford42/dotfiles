@@ -35,6 +35,14 @@ slurm_last_active_id() {
   squeue -u "$USER" -h -o "%i|%V" --sort=-V | head -n1 | cut -d'|' -f1
 }
 
+cpus() {
+  local mine=$(squeue -u $USER -t running -o "%C" -h | paste -sd+ | bc)
+  local info=$(sinfo -o "%C" -h)
+  local total=$(echo "$info" | cut -d/ -f4)
+  local idle=$(echo "$info" | cut -d/ -f2)
+  echo "Using ${mine:-0} out of ${total}; ${idle} idle"
+}
+
 sb() {
   local out
   out=$(command sbatch "$@")

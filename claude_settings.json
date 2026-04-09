@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "defaultMode": "default"
+  },
   "hooks": {
     "PermissionRequest": [
       {
@@ -21,7 +24,7 @@
       }
     ]
   },
+  "effortLevel": "medium",
   "fastMode": true,
-  "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "medium"
+  "skipDangerousModePermissionPrompt": true
 }

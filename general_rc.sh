@@ -10,7 +10,7 @@ alias delswaps='find . -type f -name ".*.sw[klmnop]" -delete'
 alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
-alias claudster='claude --dangerously-skip-permissions'
+alias claudster='claude'
 alias codester='codex --yolo'
 
 # git aliases

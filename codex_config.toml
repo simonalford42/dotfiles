@@ -1,9 +1,8 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
 model = "gpt-5.4"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "medium"
 personality = "pragmatic"
-service_tier = "fast"
 approvals_reviewer = "user"
 
 [projects."/Users/simon/code/SymbolicRegression.jl"]

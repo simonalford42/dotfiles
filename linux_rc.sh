@@ -135,4 +135,4 @@ export NVM_DIR="$HOME/.nvm"
 # Conservative rollback on 2026-02-13:
 # conda is initialized from ~/.bashrc (standard conda init block) to avoid duplicate PATH manipulation.
 # source /home/sca63/mambaforge/etc/profile.d/conda.sh
-# conda activate meta_sr
+conda activate meta_sr

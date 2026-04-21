@@ -2,6 +2,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "sonnet",
   "hooks": {
     "PermissionRequest": [
       {
@@ -24,7 +25,7 @@
       }
     ]
   },
-  "effortLevel": "medium",
+  "effortLevel": "xhigh",
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
   "model": "opus"

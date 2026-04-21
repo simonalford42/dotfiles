@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "defaultMode": "default"
+    "defaultMode": "auto"
   },
   "hooks": {
     "PermissionRequest": [
@@ -28,4 +28,5 @@
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
   "model": "opus"
+  "skipAutoPermissionPrompt": true
 }

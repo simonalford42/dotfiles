@@ -26,5 +26,6 @@
   },
   "effortLevel": "medium",
   "fastMode": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "model": "opus"
 }

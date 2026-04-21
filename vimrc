@@ -85,7 +85,11 @@ augroup Inserting
     autocmd InsertEnter * highlight StatusLine cterm=NONE ctermbg=4 ctermfg=8 gui=underline gui=NONE guibg=#ffffff guifg=#d70000
     " Revert Color to default when leaving Insert Mode
     autocmd InsertLeave * highlight StatusLine cterm=NONE ctermbg=1 ctermfg=8 gui=underline gui=NONE guibg=#ffffff guifg=#d70000
-    autocmd InsertLeave * write " might slow things down a bit
+augroup END
+
+augroup Autosave
+    autocmd!
+    autocmd FocusLost,BufLeave,QuitPre * silent! update
 augroup END
 
 augroup CursorLineOnlyInActiveWindow
@@ -104,9 +108,6 @@ autocmd Filetype scheme set softtabstop=2
 
 " no line wrapping for bash
 autocmd FileType sh set tw=0
-
-" Restore default behaviour when leaving Vim.
-autocmd VimLeave * silent !stty ixon
 
 " in Python underscores act like new words.
 " autocmd FileType python set iskeyword-=_
@@ -323,8 +324,7 @@ noremap gT :!mv <C-R>% ~/trash/ <CR>:bp\|bd #<CR>:echo "moved file to trash"<CR>
 
 
 
-" Allow us to use Ctrl-s and Ctrl-q as keybinds
-silent !stty -ixon
+" Ctrl-S/Ctrl-Q terminal flow control is disabled in general_rc.sh.
 
 " COMMANDS
 

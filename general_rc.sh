@@ -26,6 +26,12 @@ alias grep='grep --color=always'
 # use vim bindings in command line
 set -o vi
 
+# Allow Ctrl-S/Ctrl-Q keybindings in terminal programs without making Vim run
+# stty during startup.
+if [ -t 0 ]; then
+    stty -ixon 2>/dev/null || true
+fi
+
 
 bp() {
   local files=(
@@ -104,4 +110,3 @@ function gg() {
 
 # put ~/dotfiles/scripts on path
 export PATH="$HOME/dotfiles/scripts:$PATH"
-

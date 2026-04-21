@@ -119,5 +119,12 @@
 { "key": "ctrl+; j", "command": "workbench.action.openEditorAtIndex7" },
 { "key": "ctrl+; k", "command": "workbench.action.openEditorAtIndex8" },
 { "key": "ctrl+; l", "command": "workbench.action.openEditorAtIndex9" },
-{ "key": "ctrl+; ;", "command": "workbench.action.openEditorAtIndex10" },
+{
+    "key": "ctrl+; ;",
+    "command": "workbench.action.openEditorAtIndex10"
+},
+{
+    "key": "shift+cmd+\\",
+    "command": "workbench.action.terminal.kill"
+},
 ]

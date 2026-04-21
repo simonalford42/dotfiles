@@ -28,6 +28,6 @@
   "effortLevel": "xhigh",
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
-  "model": "opus"
+  "model": "opus",
   "skipAutoPermissionPrompt": true
 }

@@ -1,7 +1,7 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
-model = "gpt-5.4"
-model_reasoning_effort = "medium"
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
 personality = "pragmatic"
 approvals_reviewer = "user"
 
@@ -128,6 +128,21 @@ trust_level = "trusted"
 [projects."/Users/simon/code/projects/cactus-light"]
 trust_level = "trusted"
 
+[projects."/Users/simon/code/projects/grace-sweater-design"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/cactus-giveaway"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/finance"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/misc"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/chrome-extensions"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 gpt-5-codex = "gpt-5.2-codex"
 "gpt-5.3-codex" = "gpt-5.4"
@@ -135,3 +150,6 @@ gpt-5-codex = "gpt-5.2-codex"
 [tui]
 notifications = ["approval-requested"]
 notification_method = "osc9"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4

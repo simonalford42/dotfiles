@@ -115,3 +115,5 @@ path=('/Users/simon/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+#
+mamba activate py314

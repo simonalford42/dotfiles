@@ -1,7 +1,7 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
 model = "gpt-5.5"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "medium"
 personality = "pragmatic"
 approvals_reviewer = "user"
 
@@ -141,6 +141,12 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/simon/code/projects/chrome-extensions"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/projects/calder"]
+trust_level = "trusted"
+
+[projects."/Users/simon/code/planet_eqs"]
 trust_level = "trusted"
 
 [notice.model_migrations]

@@ -2,14 +2,14 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "hooks": {
     "Notification": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "STDIN=$(cat); MSG=$(echo \"$STDIN\" | jq -r '.message // \"Claude needs attention\"'); printf '\\e]9;%s\\e\\\\' \"$MSG\" > /dev/$(ps -o tty= -p $PPID | tr -d ' ')"
+            "command": "STDIN=$(cat); ( : >/dev/tty ) 2>/dev/null || exit 0; TOOL=$(printf '%s' \"$STDIN\" | jq -r '.tool_name // \"\"'); CMD=$(printf '%s' \"$STDIN\" | jq -r '.tool_input.command // \"\"' | head -c 60); MSG=\"Claude needs approval: $TOOL\"; if [ -n \"$CMD\" ]; then MSG=\"$MSG: $CMD\"; fi; printf '\\e]9;%s\\e\\\\' \"$MSG\" > /dev/tty"
           }
         ]
       }
@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "STDIN=$(cat); TRANSCRIPT=$(echo \"$STDIN\" | jq -r '.transcript_path'); sleep 0.5; FULL=$(tac \"$TRANSCRIPT\" | jq -r 'select(.type==\"assistant\") | .message.content[]? | select(.type==\"text\") | .text' 2>/dev/null | head -1); MSG=$(printf '%.50s' \"$FULL\"); if [ \"$MSG\" != \"$FULL\" ]; then MSG=\"$MSG...\"; fi; printf '\\e]9;Claude: %s\\e\\\\' \"$MSG\" > /dev/$(ps -o tty= -p $PPID | tr -d ' ')"
+            "command": "STDIN=$(cat); ( : >/dev/tty ) 2>/dev/null || exit 0; TRANSCRIPT=$(printf '%s' \"$STDIN\" | jq -r '.transcript_path // empty'); [ -f \"$TRANSCRIPT\" ] || exit 0; sleep 0.5; FULL=$(tac \"$TRANSCRIPT\" | jq -Rr 'fromjson? | select(.type==\"assistant\") | .message.content[]? | select(.type==\"text\") | .text' 2>/dev/null | head -1); [ -z \"$FULL\" ] && exit 0; MSG=$(printf '%.50s' \"$FULL\"); if [ \"$MSG\" != \"$FULL\" ]; then MSG=\"$MSG...\"; fi; printf '\\e]9;Claude: %s\\e\\\\' \"$MSG\" > /dev/tty"
           }
         ]
       }
@@ -28,6 +28,8 @@
   "effortLevel": "medium",
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
-  "preferredNotifChannel": "iterm2",
+  "preferredNotifChannel": "auto",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true
 }

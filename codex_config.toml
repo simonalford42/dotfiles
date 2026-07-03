@@ -147,6 +147,14 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/simon/code/planet_eqs"]
+
+[projects."/home/sca63/planet_eqs2"]
+trust_level = "trusted"
+
+[projects."/home/sca63/planet_eqs3"]
+trust_level = "trusted"
+
+[projects."/home/sca63/planet_eqs4"]
 trust_level = "trusted"
 
 [projects."/Users/simon/code/projects/bt-menubar"]

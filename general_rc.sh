@@ -12,8 +12,10 @@ alias pip='python -m pip'
 alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
 alias claudster='claude --dangerously-skip-permissions'
 alias c='claude --dangerously-skip-permissions'
+alias cr='claude --dangerously-skip-permissions --resume'
 alias codester='codex --yolo'
 alias co='codex --yolo'
+alias cor='codex --yolo resume'
 
 # git aliases
 alias gp='git pull'

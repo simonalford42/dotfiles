@@ -29,7 +29,7 @@
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true,
-  "tui": "fullscreen"
+  "tui": "fullscreen",
   "preferredNotifChannel": "auto",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true

@@ -11,8 +11,9 @@ alias tld='vim ~/dotfiles/tldr.sh'
 alias pip='python -m pip'
 alias condastartup='cd $CONDA_PREFIX/etc/conda/activate.d/'
 alias claudster='claude --dangerously-skip-permissions'
+alias c='claude --dangerously-skip-permissions'
 alias codester='codex --yolo'
-alias c='claude'
+alias co='codex --yolo'
 
 # git aliases
 alias gp='git pull'

@@ -116,4 +116,6 @@ export PATH
 
 # <<< juliaup initialize <<<
 #
-mamba activate py314
+#
+
+conda activate py314

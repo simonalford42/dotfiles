@@ -29,5 +29,6 @@
   "fastMode": true,
   "skipDangerousModePermissionPrompt": true,
   "preferredNotifChannel": "iterm2",
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "tui": "fullscreen"
 }

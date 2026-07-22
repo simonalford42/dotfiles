@@ -45,15 +45,22 @@ bp() {
     ~/dotfiles/tldr.sh
   )
 
-  if [[ -n "$CONDA_PREFIX" && -d "$CONDA_PREFIX/etc/conda/activate.d" ]]; then
-    local conda_dir="$CONDA_PREFIX/etc/conda/activate.d"
-    local f
+  local conda_dir
+  local f
 
-    shopt -s nullglob
-    for f in "$conda_dir"/*.sh; do
-      files+=("$f")
-    done
-    shopt -u nullglob
+  if [[ -n "${CONDA_PREFIX:-}" ]]; then
+    conda_dir="$CONDA_PREFIX/etc/conda/activate.d"
+
+    if [[ -d "$conda_dir" ]]; then
+      while IFS= read -r f; do
+        files+=("$f")
+      done < <(
+        find "$conda_dir" \
+          ! -path "$conda_dir" -prune \
+          -type f -name '*.sh' -print |
+          sort
+      )
+    fi
   fi
 
   vim "${files[@]}"

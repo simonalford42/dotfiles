@@ -1,7 +1,7 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
-model = "gpt-5.5"
-model_reasoning_effort = "high"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "low"
 personality = "pragmatic"
 approvals_reviewer = "user"
 
@@ -173,3 +173,4 @@ notification_method = "osc9"
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
+"gpt-5.6-sol" = 2

@@ -1,11 +1,7 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
 model = "gpt-5.6-sol"
-<<<<<<< HEAD
 model_reasoning_effort = "medium"
-=======
-model_reasoning_effort = "high"
->>>>>>> f6ac724 (update)
 personality = "pragmatic"
 approvals_reviewer = "user"
 service_tier = "fast"

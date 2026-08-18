@@ -1,7 +1,11 @@
 notify = ["bash", "/Users/simon/dotfiles/notify-osc9.sh"]
 
 model = "gpt-5.6-sol"
+<<<<<<< HEAD
 model_reasoning_effort = "medium"
+=======
+model_reasoning_effort = "high"
+>>>>>>> f6ac724 (update)
 personality = "pragmatic"
 approvals_reviewer = "user"
 service_tier = "fast"
@@ -164,7 +168,17 @@ trust_level = "trusted"
 [projects."/Users/simon/code/projects/vitalek"]
 trust_level = "trusted"
 
+<<<<<<< HEAD
 [projects."/Users/simon/code/sandia/Hodgkins-Huxley"]
+=======
+[projects."/home/sca63/sandia_covid/CityCOVID4Univ"]
+trust_level = "trusted"
+
+[projects."/home/sca63/sandia_covid"]
+trust_level = "trusted"
+
+[projects."/home/sca63/sandia_spiking"]
+>>>>>>> f6ac724 (update)
 trust_level = "trusted"
 
 [notice.model_migrations]

@@ -1,7 +1,3 @@
-# use cuda 12.1 (for R project)
-export PATH=/usr/local/cuda-12.1/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
-
 # automatically put slurm outfiles in ~/out/
 # export SBATCH_OUTPUT="$HOME/out/%A_%a.out"
 # export SBATCH_ERROR="$HOME/out/%A_%a.out"

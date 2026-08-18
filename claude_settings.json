@@ -1,4 +1,4 @@
-    {
+{
   "permissions": {
     "defaultMode": "auto"
   },
@@ -25,13 +25,11 @@
       }
     ]
   },
-  "effortLevel": "high",
-  "fastMode": true,
+  "effortLevel": "medium",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "tui": "fullscreen",
   "preferredNotifChannel": "auto",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }

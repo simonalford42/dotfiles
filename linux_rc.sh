@@ -129,3 +129,8 @@ export NVM_DIR="$HOME/.nvm"
 # conda is initialized from ~/.bashrc (standard conda init block) to avoid duplicate PATH manipulation.
 # source /home/sca63/mambaforge/etc/profile.d/conda.sh
 conda activate meta_sr
+
+# Let Slurm discover its configuration if the inherited path is invalid.
+if [[ -n ${SLURM_CONF:-} && ! -r "$SLURM_CONF" ]]; then
+    unset SLURM_CONF
+fi

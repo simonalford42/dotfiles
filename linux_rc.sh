@@ -78,7 +78,8 @@ alias gpujobe1='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --
 alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --nodelist=ellis-compute-02 --pty bash'
 alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
-# try to get ellis-compute-01, if it takes more than 5 seconds just get any node on ellis
+# Try full resources on 01, then any Ellis node (5 seconds each).
+# Fall back to minimal resources on 01 (5 seconds), then queue on 02.
 vscpue() {
   srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
        --partition=ellis-interactive \
@@ -86,7 +87,17 @@ vscpue() {
        --pty bash \
   || \
   srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
+       --partition=ellis-interactive --immediate=5 \
+       --pty bash \
+  || \
+  srun --nodes=1 --cpus-per-task=1 --time=02:00:00 --mem=4G \
        --partition=ellis-interactive \
+       --nodelist=ellis-compute-01 --immediate=5 \
+       --pty bash \
+  || \
+  srun --nodes=1 --cpus-per-task=1 --time=02:00:00 --mem=4G \
+       --partition=ellis-interactive \
+       --nodelist=ellis-compute-02 \
        --pty bash
 }
 alias v=vscpue

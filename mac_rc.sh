@@ -28,6 +28,9 @@ function vpn() {
         echo "Already connected."
         echo "Disconnect with: /opt/cisco/secureclient/bin/vpn disconnect"
     else
+        # The GUI and CLI compete for the VPN connection capability.
+        osascript -e 'tell application "Cisco Secure Client" to quit' 2>/dev/null
+        sleep 1
         /Users/simon/code/scripts/cornell-vpn-keychain.exp
     fi
 }

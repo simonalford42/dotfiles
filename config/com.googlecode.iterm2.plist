@@ -38,6 +38,35 @@ The script should do this: \(ai.prompt)</string>
 	<false/>
 	<key>BootstrapDaemon</key>
 	<false/>
+	<key>ClaudeCodeTriggersInstalled</key>
+	<true/>
+	<key>CodeReviewSavedPrompts</key>
+	<data>
+	W3sidXVpZCI6IjBCNzAwMEUyLTVBNUEtNEE2MC1BRkZCLTJFRjgyNjUyMzgxNCIsInRl
+	eHQiOiJSZXZpZXcgdGhlIHBlbmRpbmcgY2hhbmdlcyBpbiB0aGlzIHJlcG8uIEZsYWcg
+	aXNzdWVzIGEgY2FyZWZ1bCBtYWludGFpbmVyIHdvdWxkIGJsb2NrIG9uIGJlZm9yZSBt
+	ZXJnZSwgaW4gcm91Z2hseSB0aGlzIG9yZGVyOlxuICAxLiBDb3JyZWN0bmVzcyDigJQg
+	bG9naWMgZXJyb3JzLCBicm9rZW4gaW52YXJpYW50cywgbWlzc2VkIGVkZ2UgY2FzZXMs
+	IG9mZi1ieS1vbmUsIHJhY2VzLCBsaWZldGltZVwvbWVtb3J5IGJ1Z3MsIGVycm9yIHBh
+	dGhzIHRoYXQgc3dhbGxvdyBmYWlsdXJlcy5cbiAgMi4gU2VjdXJpdHkg4oCUIGluamVj
+	dGlvbiwgYXV0aG5cL2F1dGh6IG1pc3Rha2VzLCBzZWNyZXQgaGFuZGxpbmcsIHVuc2Fm
+	ZSBkZXNlcmlhbGl6YXRpb24sIHVuc2FmZSBkZWZhdWx0cywgVE9DVE9VLlxuICAzLiBS
+	ZWxpYWJpbGl0eSAmIHBlcmZvcm1hbmNlIOKAlCBibG9ja2luZyB0aGUgd3JvbmcgdGhy
+	ZWFkLCB1bmJvdW5kZWQgcmVzb3VyY2UgdXNlLCBhY2NpZGVudGFsIE8oTsKyKSwgcmV0
+	cmllcyB3aXRob3V0IGJhY2tvZmYsIHNpbGVudCBmYWlsdXJlIHBhdGhzLlxuICA0LiBD
+	b250cmFjdCByaXNrIOKAlCBiZWhhdmlvciBjaGFuZ2VzIGNhbGxlcnMgcmVseSBvbiwg
+	c2lsZW50bHkgY2hhbmdlZCBkZWZhdWx0cywgYnJva2VuIGJhY2t3YXJkIGNvbXBhdGli
+	aWxpdHksIG1pc3NpbmcgbWlncmF0aW9ucy5cblxuRm9yIGVhY2ggZmluZGluZyBjaXRl
+	IGBmaWxlOmxpbmVgLCBleHBsYWluICp3aHkqIGl0IGlzIHdyb25nIChub3Qgd2hhdCB0
+	aGUgY29kZSBkb2VzKSwgYW5kIHByb3Bvc2UgYSBjb25jcmV0ZSBmaXggd2hlbiBvbmUg
+	aXMgb2J2aW91cy4gQmUgY2FsaWJyYXRlZDogaWYgYSBmaW5kaW5nIGlzIG5vdCBoaWdo
+	LWNvbmZpZGVuY2UsIHNheSBzbyBvciBza2lwIGl0LiBWZXJpZnkgY2xhaW1zIGFnYWlu
+	c3QgdGhlIGFjdHVhbCBjb2RlIHJhdGhlciB0aGFuIGluZmVycmluZyBmcm9tIG5hbWVz
+	LlxuXG5Ta2lwIHB1cmUgc3R5bGUsIGZvcm1hdHRpbmcsIG5hbWluZywgYW5kIGFueXRo
+	aW5nIGEgbGludGVyIG9yIENJIGFscmVhZHkgZW5mb3JjZXMuXG5cbklmIHlvdSBmaW5k
+	IG5vdGhpbmcgd29ydGggZml4aW5nLCBzYXkgc28gcGxhaW5seS4iLCJuYW1lIjoiRGVm
+	YXVsdCJ9XQ==
+	</data>
 	<key>CompactMinimalTabBarHeight</key>
 	<real>22</real>
 	<key>Custom Color Presets</key>
@@ -56896,7 +56925,7 @@ The script should do this: \(ai.prompt)</string>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>EnableAPIServer</key>
-	<false/>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0xd-0x20000-0x24</key>
@@ -57355,6 +57384,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -57812,6 +57888,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -58235,6 +58358,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<integer>0</integer>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -58604,6 +58774,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -59075,6 +59292,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -59546,6 +59810,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -59925,6 +60236,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -60304,6 +60662,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -60761,6 +61166,53 @@ The script should do this: \(ai.prompt)</string>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -60838,10 +61290,45 @@ The script should do this: \(ai.prompt)</string>
 	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Session Status</string>
+	</array>
 	<key>UseModernScrollWheelAccumulator</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>Workgroups</key>
+	<data>
+	W3sidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZSIsInNlc3Npb25z
+	IjpbeyJraW5kIjp7ImtpbmQiOiJyb290In0sImNvbW1hbmQiOiIiLCJ1bmlxdWVJZGVu
+	dGlmaWVyIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJ1cmxTdHJpbmciOiIiLCJt
+	b2RlIjoicmVndWxhciIsInBlckZpbGVDb21tYW5kIjoiIiwidG9vbGJhckl0ZW1zIjpb
+	eyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoiZ2l0U3RhdHVzIn0seyJraW5k
+	IjoiYXV0b1JlcXVlc3RSZXZpZXdXaGVuSWRsZSJ9XSwiZGlzcGxheU5hbWUiOiJDaGF0
+	In0seyJjb21tYW5kIjoiZ2l0IGRpZmZ0b29sIC15IC14IHZpbWRpZmYgXFwoZ2l0QmFz
+	ZSkiLCJwYXJlbnRJRCI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5tYWluIiwicGVyRmlsZUNv
+	bW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmltZGlmZiBcXChnaXRCYXNlKSAtLSBc
+	XChmaWxlKSIsImtpbmQiOnsia2luZCI6InBlZXIifSwidXJsU3RyaW5nIjoiIiwidW5p
+	cXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5kaWZmIiwidG9vbGJhckl0
+	ZW1zIjpbeyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoiY2hhbmdlZEZpbGVT
+	ZWxlY3RvciJ9LHsia2luZCI6ImdpdEJhc2VTZWxlY3RvciJ9LHsiYmFja1Nob3J0Y3V0
+	Ijp7InNlcmlhbGl6ZWQiOiIweGY3MDItMHgzNDAwMDAtMHg3YiJ9LCJraW5kIjoibmF2
+	aWdhdGlvbiIsImZvcndhcmRTaG9ydGN1dCI6eyJzZXJpYWxpemVkIjoiMHhmNzAzLTB4
+	MzQwMDAwLTB4N2MifSwicmVsb2FkU2hvcnRjdXQiOnsic2VyaWFsaXplZCI6IjB4NzIt
+	MHgxMDAwMDAtMHhmIn19XSwiZGlzcGxheU5hbWUiOiJEaWZmIiwibW9kZSI6ImRpZmYi
+	fSx7ImNvbW1hbmQiOiJjbGF1ZGUgXFwoY29kZVJldmlld1Byb21wdCkgLS1hcHBlbmQt
+	c3lzdGVtLXByb21wdC1maWxlICdcXChjb2RlUmV2aWV3U3lzdGVtUHJvbXB0RmlsZSkn
+	IC0tc2V0dGluZ3MgJ1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jl
+	c291cmNlc1wvY29kZS1yZXZpZXctc2V0dGluZ3MudHh0JyIsInBhcmVudElEIjoiYnVp
+	bHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJwZXJGaWxlQ29tbWFuZCI6IiIsImtpbmQiOnsi
+	a2luZCI6InBlZXIifSwidXJsU3RyaW5nIjoiIiwidW5pcXVlSWRlbnRpZmllciI6ImJ1
+	aWx0aW4uY2xhdWRlQ29kZS5yZXZpZXciLCJ0b29sYmFySXRlbXMiOlt7ImtpbmQiOiJt
+	b2RlU3dpdGNoZXIifSx7ImtpbmQiOiJyZWxvYWQiLCJzaG9ydGN1dCI6eyJzZXJpYWxp
+	emVkIjoiMHg3Mi0weDEwMDAwMC0weGYifX0seyJraW5kIjoiYXV0b1NlbmRDbGlwcGlu
+	Z3NXaGVuSWRsZSJ9XSwiZGlzcGxheU5hbWUiOiJDb2RlIFJldmlldyIsIm1vZGUiOiJj
+	b2RlUmV2aWV3In1dLCJuYW1lIjoiQ2xhdWRlIENvZGUifV0=
+	</data>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>

@@ -87,6 +87,9 @@ precmd() {
 }
 fi
 
+# arm64 Homebrew (/opt/homebrew) takes precedence over the old Intel one in /usr/local
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # for docker-credential-desktop
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 

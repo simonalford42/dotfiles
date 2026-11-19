@@ -80,6 +80,7 @@ alias gpujobe1='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --
 alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --nodelist=ellis-compute-02 --pty bash'
 alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
+alias vtest='srun --cpus-per-task=8 --time=08:00:00 --mem=20G --partition=ellis-interactive --immediate=20 --pty bash'
 vscpue() {
   srun --cpus-per-task=8 --time=08:00:00 --mem=20G \
        --partition=ellis-interactive \

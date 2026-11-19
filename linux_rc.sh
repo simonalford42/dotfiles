@@ -63,6 +63,7 @@ function tlast() {
 }
 
 alias longijob='srun --nodes=1 --cpus-per-task=8 --time=48:00:00 --mem=20G --partition=ellis-interactive --pty bash'
+alias longijob2='srun --nodes=1 --cpus-per-task=8 --time=48:00:00 --mem=20G --partition=default-partition-interactive --pty bash'
 alias ma='mamba activate'
 alias ecopy='touch ~/to_copy/random.txt && mv ~/to_copy/* ~/trash/'
 alias src='source ~/dotfiles/linux_rc.sh'
@@ -70,7 +71,8 @@ alias ijob='srun --nodes=1 --time=02:00:00 --mem=50G --pty bash'
 alias gpujob='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpu='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
 alias vsgpue='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=ellis-interactive --pty bash'
-alias vscpu='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G --partition=default_partition-interactive --pty bash'
+alias vscpu='srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=20G --partition=default_partition-interactive --pty bash'
+alias vscpu2='srun --nodes=1 --cpus-per-task=8 --time=02:00:00 --mem=20G --partition=default_partition-interactive --pty bash'
 alias gpujob2='srun --nodes=1 --gres=gpu:1 --cpus-per-task=8 --time=02:00:00 --mem=50G --partition=gpu-interactive --pty bash'
 alias gpujobe='srun --nodes=1 --cpus-per-task=8 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --pty bash'
 alias gpujoba='srun --gres=gpu:a6000:1 --time=02:00:00 --partition=gpu-interactive --pty bash'
@@ -78,29 +80,23 @@ alias gpujobe1='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --
 alias gpujobe2='srun --nodes=1 --cpus-per-task=4 --gres=gpu:1 --time=02:00:00 --mem=50G --partition=ellis-interactive --nodelist=ellis-compute-02 --pty bash'
 alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" | tail -n1); tail -F "out/${jid}.out"'
 
-# Try full resources on 01, then any Ellis node (5 seconds each).
-# Fall back to minimal resources on 01 (5 seconds), then queue on 02.
 vscpue() {
-  srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
+  srun --cpus-per-task=8 --time=08:00:00 --mem=20G \
        --partition=ellis-interactive \
-       --nodelist=ellis-compute-01 --immediate=5 \
+       --immediate=20 \
        --pty bash \
-  || \
-  srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
-       --partition=ellis-interactive --immediate=5 \
-       --pty bash \
-  || \
-  srun --nodes=1 --cpus-per-task=1 --time=02:00:00 --mem=4G \
+  srun --cpus-per-task=1 --time=02:00:00 --mem=4G \
        --partition=ellis-interactive \
-       --nodelist=ellis-compute-01 --immediate=5 \
-       --pty bash \
-  || \
+       --pty bash
+}
+alias v=vscpue
+
+vs() {
   srun --nodes=1 --cpus-per-task=1 --time=02:00:00 --mem=4G \
        --partition=ellis-interactive \
        --nodelist=ellis-compute-02 \
        --pty bash
 }
-alias v=vscpue
 
 alias jnb='XDG_RUNTIME_DIR=/tmp/sca63 jupyter-notebook --ip=0.0.0.0 --port=8899'
 

@@ -80,12 +80,12 @@ alias sub='jid=$(bash submit_jobs.sh | awk "/Submitted batch job/{print \$NF}" |
 
 # try to get ellis-compute-01, if it takes more than 5 seconds just get any node on ellis
 vscpue() {
-  srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
+  srun --nodes=1 --cpus-per-task=4 --time=08:00:00 --mem=20G \
        --partition=ellis-interactive \
        --nodelist=ellis-compute-01 --immediate=5 \
        --pty bash \
   || \
-  srun --nodes=1 --cpus-per-task=8 --time=08:00:00 --mem=50G \
+  srun --nodes=1 --cpus-per-task=4 --time=08:00:00 --mem=20G \
        --partition=ellis-interactive \
        --pty bash
 }

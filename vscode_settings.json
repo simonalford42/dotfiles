@@ -226,7 +226,7 @@
       }
     ],
     "editor.wordWrap": "on",
-    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/simon/dotfiles/init.vim",
     "vscode-neovim.highlightGroups.highlights": {
 

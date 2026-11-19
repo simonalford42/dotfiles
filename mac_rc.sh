@@ -87,11 +87,7 @@ precmd() {
 }
 fi
 
-# arm64 Homebrew (/opt/homebrew) takes precedence over the old Intel one in /usr/local
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# for docker-credential-desktop
-export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
 # Only set PATH eagerly (fast)
 export PATH="/Users/simon/mambaforge/bin:$PATH"
@@ -130,3 +126,17 @@ export PATH
 #
 
 conda activate py314
+
+# Add a cluster node to ~/.ssh/config (jumps through unicorn login node)
+addnode() {
+  if [[ -z "$1" ]]; then
+    echo "usage: addnode <hostname>" >&2
+    return 1
+  fi
+  if grep -qE "^Host[[:space:]]+$1([[:space:]]|\$)" ~/.ssh/config 2>/dev/null; then
+    echo "Host $1 already exists in ~/.ssh/config" >&2
+    return 1
+  fi
+  printf '\nHost %s\n  User sca63\n  ProxyJump sca63@unicorn-login-01.coecis.cornell.edu\n' "$1" >> ~/.ssh/config
+  echo "Added $1 to ~/.ssh/config"
+}
